@@ -1,8 +1,9 @@
 ﻿@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
+@using Sitecore.Links
 @model RenderingModel
 @{
-
+    //var linkUrl= LinkManager.GetItemUrl(item)
 }
 <header role="banner" style="top:75px">
     <div class="search-icon" id="search-trigger-overlay">
@@ -37,163 +38,64 @@
                                 </li>
                                 <!-- BEGIN MAIN NAVIGATION -->
 
-                                <li class="nav-item ">
-                                    <a href="/services" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Services
-                                    </a>
+                                @{ 
+                                    Sitecore.Data.Fields.MultilistField NavigationLinks = Model.Item.Fields["Navigation Links"];
+                                }
+
+                                @foreach (Sitecore.Data.Items.Item nav in NavigationLinks.GetItems())
+                                {
+                                   
+                                        var linkUrl = LinkManager.GetItemUrl(nav);
+                                   
+                                    <li class="nav-item ">
+                                        <a href="@linkUrl" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            @Html.Sitecore().Field("Title",nav)
+                                        </a>
 
 
-                                    <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
-                                        <div class="menu-title">
-                                            <a href="/services">Services</a>
-                                        </div>
-                                        <div class="menu-block">
-                                            <ul class="list-unstyled">
-                                                <li class="mega-menu-item"><a href="/services/data">Data</a></li>
-                                                <li class="mega-menu-item"><a href="/services/design">Design</a></li>
-                                                <li class="mega-menu-item"><a href="/services/marketing">Marketing</a></li>
-                                                <li class="mega-menu-item"><a href="/services/operations">Operations</a></li>
-                                                <li class="mega-menu-item"><a href="/services/strategy">Strategy</a></li>
-                                                <li class="mega-menu-item"><a href="/services/technology">Technology</a></li>
-                                                <li class="mega-menu-item"><a href="/services/digital">Perficient Digital</a></li>
-                                                <li class="mega-menu-item"><a href="/services/cloud">Cloud</a></li>
-                                                <li class="mega-menu-item"><a href="/services/optimized-global-delivery">Optimized Global Delivery</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="/industries" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Industries
-                                    </a>
-
-
-                                    <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
-                                        <div class="menu-title">
-                                            <a href="/industries">Industries</a>
-                                        </div>
-                                        <div class="menu-block">
-                                            <ul class="list-unstyled">
-                                                <li class="mega-menu-item"><a href="/industries/automotive">Automotive</a></li>
-                                                <li class="mega-menu-item"><a href="/industries/communications">Communications</a></li>
-                                                <li class="mega-menu-item"><a href="/industries/consumer-markets">Consumer Markets</a></li>
-                                                <li class="mega-menu-item"><a href="/industries/energy">Energy</a></li>
-                                                <li class="mega-menu-item"><a href="/industries/financial-services">Financial Services</a></li>
-                                                <li class="mega-menu-item"><a href="/industries/healthcare">Healthcare</a></li>
-                                                <li class="mega-menu-item"><a href="/industries/high-tech">High Tech</a></li>
-                                                <li class="mega-menu-item"><a href="/industries/life-sciences">Life Sciences</a></li>
-                                                <li class="mega-menu-item"><a href="/industries/manufacturing">Manufacturing</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="/partners" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Partners
-                                    </a>
-
-                                    <div class="dropdown-menu mega-menu" aria-labelledby="partnerMenu">
-                                        <div class="menu-title">
-                                            <a href="/partners">Partners</a>
-                                        </div>
-                                        <div class="menu-block">
-                                            <div class="nav-col first-col">
-                                                <!-- added nav-col div | also has first-col class -->
-                                                <div class="nav-section-title">Enterprise Partners</div> <!-- added title div -->
-                                                <ul class="list-unstyled no-float-list">
-                                                    <li class="mega-menu-item"><a href='/partners/ibm'>IBM</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/microsoft'>Microsoft</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/oracle'>Oracle</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/pivotal'>Pivotal</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/adobe'>Adobe</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/salesforce'>Salesforce</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/sitecore'>Sitecore</a></li>
-                                                    <!-- added no-float class -->
-                                                </ul>
-                                            </div> <!-- close nav-col div -->
-                                            <div class="nav-col">
-                                                <!-- added nav-col div | no first-col class -->
-                                                <div class="nav-section-title">Strategic Partners</div> <!-- added title div -->
+                                        <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
+                                            <div class="menu-title">
+                                                <a href="" style="width:100px;max-width:200px;">@Html.Sitecore().Field("Title",nav)</a>
+                                            </div>
+                                            <div class="menu-block">
                                                 <ul class="list-unstyled">
-                                                    <li class="mega-menu-item"><a href='/partners/amazon-web-services'>Amazon Web Services</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/appian'>Appian</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/google'>Google</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/magento'>Magento</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/marketo'>Marketo</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/microstrategy'>MicroStrategy</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/onestream'>OneStream</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/pegasystems'>Pegasystems</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/red-hat'>Red Hat</a></li>
-                                                    <li class="mega-menu-item"><a href='/partners/twilio'>Twilio</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/data">Data</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/design">Design</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/marketing">Marketing</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/operations">Operations</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/strategy">Strategy</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/technology">Technology</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/digital">Perficient Digital</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/cloud">Cloud</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/optimized-global-delivery">Optimized Global Delivery</a></li>
                                                 </ul>
-                                            </div><!-- close nav-col div -->
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="/work" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Work
-                                    </a>
-
-
-                                    <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
-                                        <div class="menu-title">
-                                            <a href="/work">Work</a>
-                                        </div>
-                                        <div class="menu-block">
-                                            <ul class="list-unstyled">
-                                                <li class="mega-menu-item"><a href='/work?service=Data'>Data</a></li>
-                                                <li class="mega-menu-item"><a href='/work?service=Design'>Design</a></li>
-                                                <li class="mega-menu-item"><a href='/work?service=Marketing'>Marketing</a></li>
-                                                <li class="mega-menu-item"><a href='/work?service=Operations'>Operations</a></li>
-                                                <li class="mega-menu-item"><a href='/work?service=Strategy'>Strategy</a></li>
-                                                <li class="mega-menu-item"><a href='/work?service=Technology'>Technology</a></li>
-                                                <li class="mega-menu-item"><a href='https://www.perficientdigital.com/our-work' target='_blank'>Perficient Digital</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item ">
-                                    <a href="/insights" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Insights
-                                    </a>
-
-
-                                    <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
-                                        <div class="menu-title">
-                                            <a href="/insights">Insights</a>
-                                        </div>
-                                        <div class="menu-block">
-                                            <ul class="list-unstyled">
-                                                <li class="mega-menu-item"><a href='https://blogs.perficient.com/'>Blogs</a></li>
-                                                <li class="mega-menu-item"><a href="/insights/events">Events</a></li>
-                                                <li class="mega-menu-item"><a href="/insights/guides">Guides</a></li>
-                                                <li class="mega-menu-item"><a href="/insights/webinars">Webinars</a></li>
-                                                <li class="mega-menu-item"><a href="/insights/chief-strategists">Chief Strategists</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                }
+                                
+                                
 
 
                                 <!-- END MAIN NAVIGATION -->
                             </ul>
                         </div>
+
+                        @{
+                            Sitecore.Data.Fields.MultilistField SiteLinks = Model.Item.Fields["Site Links"];
+                        }
                         <!-- BEGIN UTILITY NAVIGATION -->
                         <div class="pull-right utility-nav">
                             <ul>
-                                <li>
-                                    <a href='/about'>About</a>
-                                </li>
-                                <li>
-                                    <a href='https://perficient.gcs-web.com'>Investors</a>
-                                </li>
-                                <li>
-                                    <a href='/careers'>Careers</a>
-                                </li>
-                                <li>
-                                    <a href='/contact'>Contact</a>
-                                </li>
+                                @foreach (Sitecore.Data.Items.Item site in SiteLinks.GetItems())
+                                {
+                                    var linkUrl = LinkManager.GetItemUrl(site);
+                                    <li>
+                                        <a href="@linkUrl">@Html.Sitecore().Field("Title", site)</a>
+                                    </li>
+                                }
+                                
+                                
                             </ul>
                         </div>
                     </div>
