@@ -5,15 +5,14 @@
 @{
   Layout = null;
 }
-
-
 <!DOCTYPE html>
 <html>
 <head>
     <!-- BEGIN NOINDEX -->
-    <title>Perficient, Inc. - Digital Transformation Consulting | vision. execution. value.  | Perficient, Inc</title>
+    <title>@Html.Sitecore().Field("Meta Title", new { DisableWebEdit = true})</title>
     <!-- END NOINDEX -->
-    <meta name="description" content=" Perficient is the leading digital transformation consulting firm serving Global 2000&#174; and enterprise customers throughout North America." />
+    
+    <meta name="description" content="@Html.Sitecore().Field("Meta Description", new { DisableWebEdit = true})"/>
     <link rel="canonical" href="https://www.perficient.com/" />
     <meta charset="utf-8">
     <!--[if gt IE 8]><!-->
@@ -24,10 +23,10 @@
 
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-    <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="~/Css/Bootstrap/bootstrap.css" rel="stylesheet" />
     <!-- inject:css -->
-    <link rel="stylesheet" href="/assets/css/perficient-main.css?v=20190905015052992">
-    <link rel="stylesheet" href="/assets/css/perficient-override.css?v=20190905015052992">
+    <link rel="stylesheet" href="~/Css/perficient-main.css">
+    <link rel="stylesheet" href="~/Css/perficient-override.css">
     <!-- endinject -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,800' rel='stylesheet' type='text/css'>
@@ -43,335 +42,11 @@
     <script class="coveo-for-sitecore-script" type="text/javascript" src='/Coveo/Hive/js/CoveoForSitecore.Lazy.min.js'></script>
     <script type="text/javascript" src="/Coveo/Hive/js/cultures/en.js"></script>
 
-    <div>
-
-
-
-
-        <!-- Resources -->
-        <div id="coveo3a949f41"
-             class="CoveoForSitecoreContext"
-             data-sc-should-have-analytics-component='true'
-             data-sc-analytics-enabled='true'
-             data-sc-current-language='en'
-             data-prebind-sc-language-field-name='fieldTranslator'
-             data-sc-language-field-name='_language'
-             data-sc-labels='{&quot;Search is currently unavailable&quot; : &quot;Oops! Something went wrong on the server.&quot; , &quot;If the problem persists contact the administrator.&quot; : &quot;If the problem persists contact the administrator.&quot; , &quot;Template&quot; : &quot;Template&quot; , &quot;Last time modified.&quot; : &quot;Last time modified.&quot; , &quot;Updated by&quot; : &quot;Updated by&quot; , &quot;Uniform resource identifier&quot; : &quot;URI&quot; , &quot;Created by&quot; : &quot;Created by&quot; , &quot;Created&quot; : &quot;Created&quot; , &quot;Language&quot; : &quot;Language&quot; , &quot;Creation time.&quot; : &quot;Creation time.&quot;}'
-             data-sc-maximum-age='900000'
-             data-sc-page-name='Home'
-             data-sc-page-name-full-path='/sitecore/content/Perficient/Home'
-             data-sc-index-source-name='Coveo_web_index - perficient'
-             data-sc-is-in-experience-editor='false'
-             data-sc-is-user-anonymous='true'
-             data-sc-item-uri='sitecore://web/{DE2D12E0-37C0-460F-B979-E44C25DCF8AC}?lang=en&amp;ver=1'
-             data-sc-item-id='de2d12e0-37c0-460f-b979-e44c25dcf8ac'
-             data-prebind-sc-latest-version-field-name='fieldTranslator'
-             data-sc-latest-version-field-name='_latestversion'
-             data-sc-rest-endpoint-uri='/coveo/rest'
-             data-sc-site-name='perficient'
-             data-sc-field-prefix='f'
-             data-sc-field-suffix='90452'
-             data-sc-prefer-source-specific-fields='false'
-             data-sc-external-fields='[{&quot;fieldName&quot;:&quot;permanentid&quot;,&quot;shouldEscape&quot;:false}]'
-             data-sc-source-specific-fields='[{&quot;fieldName&quot;:&quot;attachmentparentid&quot;},{&quot;fieldName&quot;:&quot;author&quot;},{&quot;fieldName&quot;:&quot;clickableuri&quot;},{&quot;fieldName&quot;:&quot;collection&quot;},{&quot;fieldName&quot;:&quot;concepts&quot;},{&quot;fieldName&quot;:&quot;date&quot;},{&quot;fieldName&quot;:&quot;filetype&quot;},{&quot;fieldName&quot;:&quot;indexeddate&quot;},{&quot;fieldName&quot;:&quot;isattachment&quot;},{&quot;fieldName&quot;:&quot;language&quot;},{&quot;fieldName&quot;:&quot;printableuri&quot;},{&quot;fieldName&quot;:&quot;rowid&quot;},{&quot;fieldName&quot;:&quot;size&quot;},{&quot;fieldName&quot;:&quot;source&quot;},{&quot;fieldName&quot;:&quot;title&quot;},{&quot;fieldName&quot;:&quot;topparent&quot;},{&quot;fieldName&quot;:&quot;topparentid&quot;},{&quot;fieldName&quot;:&quot;transactionid&quot;},{&quot;fieldName&quot;:&quot;uri&quot;},{&quot;fieldName&quot;:&quot;urihash&quot;}]'>
-        </div>
-        <script type="text/javascript">
-        var endpointConfiguration = {
-            itemUri: "sitecore://web/{DE2D12E0-37C0-460F-B979-E44C25DCF8AC}?lang=en&amp;ver=1",
-            siteName: "perficient",
-            restEndpointUri: "/coveo/rest"
-        };
-        if (typeof (CoveoForSitecore) !== "undefined") {
-            CoveoForSitecore.SearchEndpoint.configureSitecoreEndpoint(endpointConfiguration);
-            CoveoForSitecore.version = "5.0.407.4";
-            var context = document.getElementById("coveo3a949f41");
-            if (!!context) {
-                CoveoForSitecore.Context.configureContext(context);
-            }
-        }
-        </script>
-    </div><!-- inject:js -->
     <script src="/dist/js/perficient.js?v=20190909"></script>
     <!-- endinject -->
 </head>
 <body class="">
-    <!-- Google Tag Manager -->
-    <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KG3XNG&gtm_auth=RAAYiay5N_ZA39DqsBi7YQ&gtm_preview=env-5&gtm_cookies_win=x"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_auth=RAAYiay5N_ZA39DqsBi7YQ&gtm_preview=env-5&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KG3XNG');</script>
-    <!-- End Google Tag Manager -->
-    <!-- BEGIN NOINDEX -->
-    <section>
-        <div class="search-overlay overlay overlay-effect form-footer">
-            <div class="overlay-container container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="search-container">
-
-
-
-
-                            <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var searchboxElement = document.getElementById("_185F67BF-1D73-4AEE-9564-FDE5B0EB24D9");
-        searchboxElement.addEventListener("CoveoComponentInitialized", function() {
-            CoveoForSitecore.initSearchboxIfStandalone(searchboxElement, "/search-results");
-        });
-    })
-                            </script>    <div id="_185F67BF-1D73-4AEE-9564-FDE5B0EB24D9_container"
-                                              data-prebind-maximum-age='currentMaximumAge'>
-                                <div id="_185F67BF-1D73-4AEE-9564-FDE5B0EB24D9"
-                                     class="CoveoSearchbox"
-                                     data-enable-omnibox='true'
-                                     data-prebind-maximum-age='currentMaximumAge'
-                                     data-placeholder='Search for...'>
-
-
-                                    <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-        var componentId = "_185F67BF-1D73-4AEE-9564-FDE5B0EB24D9";
-        var componentElement = document.getElementById(componentId);
-
-        function showError(error) {
-                console.error(error);
-        }
-
-        function areCoveoResourcesIncluded() {
-            return typeof (Coveo) !== "undefined";
-        }
-
-        if (areCoveoResourcesIncluded()) {
-            var event = document.createEvent("CustomEvent");
-            event.initEvent("CoveoComponentInitialized", false, true);
-
-            setTimeout(function() {
-                componentElement.dispatchEvent(event);
-            }, 0);
-        } else {
-            componentElement.classList.add("invalid");
-            showError("The Coveo Resources component must be included in this page.");
-        }
-    });
-                                    </script>
-                                    <div class="CoveoForSitecoreExpressions"></div>
-                                    <div class="CoveoForSitecoreConfigureSearchHub" data-sc-search-hub="Search Results"></div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <header role="banner">
-        <div class="search-icon" id="search-trigger-overlay">
-            <span></span>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-
-                <div class="hidden-md-up mobile-logo">
-                    <a href="/">
-                        <img src='/-/media/images/header/2015_logo_horiz_notag_png.png?h=48&amp;w=200&amp;la=en&amp;hash=027BD06CD8DDB198562D578D8CAC620DA3E1A626' alt='Perficient Logo' />
-                    </a>
-                </div>
-                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#mobilenav">
-                    <div class="menu-icon">
-                        <div class="center-bar"></div>
-                    </div>
-                </button>
-
-                <nav class="navbar navbar-full">
-                    <div class="collapse navbar-toggleable-sm" id="mobilenav">
-                        <div class="nav-block">
-                            <div class="main-nav">
-                                <ul>
-
-                                    <li class="nav-item hidden-sm-down">
-                                        <!-- Possible change here -->
-                                        <a href="/" class="logo">
-                                            <img src='/-/media/images/header/2015_logo_horiz_notag_png.png?h=48&amp;w=200&amp;la=en&amp;hash=027BD06CD8DDB198562D578D8CAC620DA3E1A626' alt='Perficient Logo' />
-                                        </a>
-                                        <!-- /Possible change here -->
-                                    </li>
-                                    <!-- BEGIN MAIN NAVIGATION -->
-
-                                    <li class="nav-item ">
-                                        <a href="/services" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Services
-                                        </a>
-
-
-                                        <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
-                                            <div class="menu-title">
-                                                <a href="/services">Services</a>
-                                            </div>
-                                            <div class="menu-block">
-                                                <ul class="list-unstyled">
-                                                    <li class="mega-menu-item"><a href="/services/data">Data</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/design">Design</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/marketing">Marketing</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/operations">Operations</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/strategy">Strategy</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/technology">Technology</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/digital">Perficient Digital</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/cloud">Cloud</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/optimized-global-delivery">Optimized Global Delivery</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="/industries" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Industries
-                                        </a>
-
-
-                                        <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
-                                            <div class="menu-title">
-                                                <a href="/industries">Industries</a>
-                                            </div>
-                                            <div class="menu-block">
-                                                <ul class="list-unstyled">
-                                                    <li class="mega-menu-item"><a href="/industries/automotive">Automotive</a></li>
-                                                    <li class="mega-menu-item"><a href="/industries/communications">Communications</a></li>
-                                                    <li class="mega-menu-item"><a href="/industries/consumer-markets">Consumer Markets</a></li>
-                                                    <li class="mega-menu-item"><a href="/industries/energy">Energy</a></li>
-                                                    <li class="mega-menu-item"><a href="/industries/financial-services">Financial Services</a></li>
-                                                    <li class="mega-menu-item"><a href="/industries/healthcare">Healthcare</a></li>
-                                                    <li class="mega-menu-item"><a href="/industries/high-tech">High Tech</a></li>
-                                                    <li class="mega-menu-item"><a href="/industries/life-sciences">Life Sciences</a></li>
-                                                    <li class="mega-menu-item"><a href="/industries/manufacturing">Manufacturing</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="/partners" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Partners
-                                        </a>
-
-                                        <div class="dropdown-menu mega-menu" aria-labelledby="partnerMenu">
-                                            <div class="menu-title">
-                                                <a href="/partners">Partners</a>
-                                            </div>
-                                            <div class="menu-block">
-                                                <div class="nav-col first-col">
-                                                    <!-- added nav-col div | also has first-col class -->
-                                                    <div class="nav-section-title">Enterprise Partners</div> <!-- added title div -->
-                                                    <ul class="list-unstyled no-float-list">
-                                                        <li class="mega-menu-item"><a href='/partners/ibm'>IBM</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/microsoft'>Microsoft</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/oracle'>Oracle</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/pivotal'>Pivotal</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/adobe'>Adobe</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/salesforce'>Salesforce</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/sitecore'>Sitecore</a></li>
-                                                        <!-- added no-float class -->
-                                                    </ul>
-                                                </div> <!-- close nav-col div -->
-                                                <div class="nav-col">
-                                                    <!-- added nav-col div | no first-col class -->
-                                                    <div class="nav-section-title">Strategic Partners</div> <!-- added title div -->
-                                                    <ul class="list-unstyled">
-                                                        <li class="mega-menu-item"><a href='/partners/amazon-web-services'>Amazon Web Services</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/appian'>Appian</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/google'>Google</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/magento'>Magento</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/marketo'>Marketo</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/microstrategy'>MicroStrategy</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/onestream'>OneStream</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/pegasystems'>Pegasystems</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/red-hat'>Red Hat</a></li>
-                                                        <li class="mega-menu-item"><a href='/partners/twilio'>Twilio</a></li>
-                                                    </ul>
-                                                </div><!-- close nav-col div -->
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="/work" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Work
-                                        </a>
-
-
-                                        <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
-                                            <div class="menu-title">
-                                                <a href="/work">Work</a>
-                                            </div>
-                                            <div class="menu-block">
-                                                <ul class="list-unstyled">
-                                                    <li class="mega-menu-item"><a href='/work?service=Data'>Data</a></li>
-                                                    <li class="mega-menu-item"><a href='/work?service=Design'>Design</a></li>
-                                                    <li class="mega-menu-item"><a href='/work?service=Marketing'>Marketing</a></li>
-                                                    <li class="mega-menu-item"><a href='/work?service=Operations'>Operations</a></li>
-                                                    <li class="mega-menu-item"><a href='/work?service=Strategy'>Strategy</a></li>
-                                                    <li class="mega-menu-item"><a href='/work?service=Technology'>Technology</a></li>
-                                                    <li class="mega-menu-item"><a href='https://www.perficientdigital.com/our-work' target='_blank'>Perficient Digital</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a href="/insights" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Insights
-                                        </a>
-
-
-                                        <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
-                                            <div class="menu-title">
-                                                <a href="/insights">Insights</a>
-                                            </div>
-                                            <div class="menu-block">
-                                                <ul class="list-unstyled">
-                                                    <li class="mega-menu-item"><a href='https://blogs.perficient.com/'>Blogs</a></li>
-                                                    <li class="mega-menu-item"><a href="/insights/events">Events</a></li>
-                                                    <li class="mega-menu-item"><a href="/insights/guides">Guides</a></li>
-                                                    <li class="mega-menu-item"><a href="/insights/webinars">Webinars</a></li>
-                                                    <li class="mega-menu-item"><a href="/insights/chief-strategists">Chief Strategists</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-
-
-                                    <!-- END MAIN NAVIGATION -->
-                                </ul>
-                            </div>
-                            <!-- BEGIN UTILITY NAVIGATION -->
-                            <div class="pull-right utility-nav">
-                                <ul>
-                                    <li>
-                                        <a href='/about'>About</a>
-                                    </li>
-                                    <li>
-                                        <a href='https://perficient.gcs-web.com'>Investors</a>
-                                    </li>
-                                    <li>
-                                        <a href='/careers'>Careers</a>
-                                    </li>
-                                    <li>
-                                        <a href='/contact'>Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- END UTILITY NAVIGATION -->
-                    </div>
-                </nav>
-
-            </div>
-        </div>
-    </header>
+    @Html.Sitecore().Placeholder("Header")
     <!-- END NOINDEX -->
 
 
