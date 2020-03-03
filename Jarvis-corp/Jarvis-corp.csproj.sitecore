@@ -1,0 +1,12 @@
+﻿<Project>
+  <PropertyGroup>
+    <Site Server="Jarvis_Corp.local" UserName="sitecore\admin" IsRemoteSitecore="True" />
+  </PropertyGroup>
+  <File Include="/Jarvis_Corp.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{7A618F93-0600-480C-88DF-DE74E14A94DF}</Item>
+  </File>
+  <File Include="Views\Shared\Jarvis_Corp.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
+  <File Include="/Views/Shared/Jarvis_Corp.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{E37AB61B-3F08-4AC5-8970-39F611CF0382}</Item>
+  </File>
+</Project>
