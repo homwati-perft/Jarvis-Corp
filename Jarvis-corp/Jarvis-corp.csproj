@@ -111,8 +111,12 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\Jarvis_Corp.cshtml" />
     <None Include="Properties\PublishProfiles\Jarvis_Corp.pubxml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Header.cshtml" />
+    <Content Include="Views\Footer.cshtml" />
+    <Content Include="Views\FooterContactUs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
