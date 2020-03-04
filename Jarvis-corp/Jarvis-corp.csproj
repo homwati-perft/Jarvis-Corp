@@ -107,6 +107,7 @@
     <Content Include="Css\Bootstrap\bootstrap.css" />
     <Content Include="Css\perficient-main.css" />
     <Content Include="Css\perficient-override.css" />
+    <Content Include="JavaScript\Main.js" />
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Shared\Jarvis_Corp.cshtml" />
