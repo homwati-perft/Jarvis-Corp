@@ -1,0 +1,85 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Sitecore.Data.Fields.MultilistField social_Media_List = Model.Item.Fields["Social Media List"];
+}
+<section class="footer-icons">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="hidden-sm-down pull-left">
+                    <li>
+                        <a href="/">
+                            @Html.Sitecore().Field("Company Logo")
+                        </a>
+                    </li>
+                    <!-- BEGIN FOOTER NAVIGATION -->
+
+                    <li>
+                        <a href='/privacy-policy'>@Html.Sitecore().Field("Privacy Policy Link Heading")</a>
+                    </li>
+
+                    <!-- END FOOTER NAVIGATION -->
+                    <li>
+                        @Html.Sitecore().Field("Copyright")
+                    </li>
+                </ul>
+                <!-- Begin Footer Icons-->
+      
+                <ul class="list-unstyled">@{
+                    foreach (Sitecore.Data.Items.Item social_Media in social_Media_List.GetItems())
+                    {
+                        <li>
+                            <a class="a2a_button_twitter">@Html.Sitecore().Field("Social Media Logo", social_Media, new { mw = 20, mh = 20 }))</a>
+                        </li>
+                    }
+                }</ul>
+                <!-- End Footer Icons-->
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="desktop-footer">
+        <div class="footer-slogan">
+            Vision. Execution. Value.
+        </div>
+        <div class="footer-links hidden-md-up">
+            <ul>
+                <!-- BEGIN FOOTER NAVIGATION MOBILE -->
+
+                <li>
+                    <a href='/privacy-policy'>@Html.Sitecore().Field("Privacy Policy Heading")</a>
+                </li>
+
+                <!-- END FOOTER NAVIGATION MOBILE -->
+            </ul>
+            <p>@Html.Sitecore().Field("Copyright")</p>
+        </div>
+        @*<button class="pull-right hidden-sm-down" type="button" id="contact-trigger-overlay">Contact Us</button>
+        <div class="footer-share">
+            <button class="dropdown-toggle" id="sharethis" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Share This Page
+            </button>*@
+            <!-- BEGIN SOCIAL MEDIA LINKS -->
+            <!-- AddToAny BEGIN -->
+            <div class="dropdown-menu sharelinks a2a_kit" aria-labelledby="sharethis">
+                <ul class="list-unstyled">
+                    @{
+                        foreach (Sitecore.Data.Items.Item social_Media in social_Media_List.GetItems())
+                        {
+                            <li>
+                                <a class="a2a_button_twitter">@Html.Sitecore().Field("Social Media Logo", social_Media)</a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
+            <!-- AddToAny END -->
+            <!-- END SOCIAL MEDIA LINKS -->
+        </div>
+    </div>
+
+</footer>
