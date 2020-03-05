@@ -6,8 +6,17 @@
     //var linkUrl= LinkManager.GetItemUrl(item)
 }
 <header role="banner" style="top:75px">
-    <div class="search-icon" id="search-trigger-overlay">
-        <span></span>
+    <div class="search-icon" id="search-trigger-overlay" onclick="openSearch()">
+        
+    </div>
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="">
+                <input type="text" placeholder="Search For.." name="search">
+                <button type="submit">Go</button>
+            </form>
+        </div>
     </div>
     <div class="container-fluid">
         <div class="row">
