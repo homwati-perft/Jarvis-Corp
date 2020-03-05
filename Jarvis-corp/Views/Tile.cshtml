@@ -1,0 +1,17 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<a href='' target='_blank'>
+    <div class="card-content">
+        <figure>
+            @Html.Sitecore().Field("Tile Card Image",new { @class = "img-responsive hidden-xs" })
+            <figcaption>@Html.Sitecore().Field("Title")</figcaption>
+        </figure>
+        <div class="card-block">
+            <h4 class="card-title">@Html.Sitecore().Field("Tile Card Heading")</h4>
+        </div>
+    </div>
+</a>
