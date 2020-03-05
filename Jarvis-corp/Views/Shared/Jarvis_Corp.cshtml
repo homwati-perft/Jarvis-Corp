@@ -41,13 +41,14 @@
     <script class="coveo-script" type="text/javascript" src='https://static.cloud.coveo.com/searchui/v2.6063/js/CoveoJsSearch.Lazy.min.js'></script>
     <script class="coveo-for-sitecore-script" type="text/javascript" src='/Coveo/Hive/js/CoveoForSitecore.Lazy.min.js'></script>
     <script type="text/javascript" src="/Coveo/Hive/js/cultures/en.js"></script>
-
+    <script type="text/javascript" src="~/JavaScript/Main.js"></script>
     <script src="/dist/js/perficient.js?v=20190909"></script>
     <!-- endinject -->
 </head>
 <body class="">
     @Html.Sitecore().Placeholder("Header")
     <!-- END NOINDEX -->
+
 
 
 
@@ -167,6 +168,39 @@
             </div>
         </div>
     </section>    <section class="hero hero-tabs">
+
+    <section class="hero hero-block solid" id="hero-main" style="display: none">
+        <div class="hero-slide-menu">
+            <div class="hero-slide-slant"></div>
+            <button class="btn-hero-menu"><span class="slide-btn-open">&#62;</span><span class="slide-btn-close">&#215;</span></button>
+            <ul class="nav slide-nav">
+                <li data-slideid="0"><a href="#">Perficient Acquires MedTouch</a></li>
+                <li data-slideid="1"><a href="#">Digital Marketing Conference</a></li>
+                <li data-slideid="2"><a href="#">VITAS gets a 2000% Increase in Site Traffic </a></li>
+                <li data-slideid="3"><a href="#">The Executive&#39;s Guide to Intelligent Automation </a></li>
+                <li data-slideid="4"><a href="#">Vlocity Improves Case Deflection by 50% Month Over Month</a></li>
+            </ul>
+        </div>
+        <div class="hero-background-container">
+            <img class="hero-background large-loaded" src=/-/media/images/homepage/hero-2020-final-orion-lg.jpg
+                 data-mobile-image=/-/media/images/homepage/hero-2020-final-orion-sm.jpg
+                 data-image=/-/media/images/homepage/hero-2020-final-orion-lg.jpg />
+            <div class="hero-caption"></div>
+        </div>
+        <div class="color-container" style="background: no-repeat right bottom/85%;">
+            <i class="icon icon-blockangle" style="color: #9e8b6a"></i>
+            <div class="hero-content">
+                <h1>Perficient Acquires MedTouch</h1>
+
+                <p>Strengthens our healthcare industry expertise and digital marketing capabilities</p>
+                <a href="/about/news-releases/2020/perficient-announces-acquisition-of-medtouch" class="btn-hero">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    @Html.Sitecore().Placeholder("Tile Component")  
+    <section class="hero hero-tabs">
+
         <div class="container hero-tabs-container">
             <div class="row hero-content-block">
                 <div class="col-lg-8 container-wrap">
@@ -241,143 +275,11 @@
 
     <!-- BEGIN NOINDEX -->
     <!-- BEGIN NOINDEX -->
-    <section class="contact-form ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <iframe src="https://go.pardot.com/l/9462/2016-03-07/6tc4d4" width="100%" scrolling="no" allowtransparency="true" id="pardot_iframe_D99E04A6BCFC4FF5BDCA4F744F87ECEF" style="border: none; overflow: hidden; height: 660px;"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+    @Html.Sitecore().Placeholder("Footer With Contact Us")
     <!-- END NOINDEX -->
 
-    <script type="text/javascript">
-    Perficient.utils.whenAvailable("iFrameResize", function () { iFrameResize({ checkOrigin: ['https://go.pardot.com'] }, '#pardot_iframe_D99E04A6BCFC4FF5BDCA4F744F87ECEF'); });
-    </script>
 
-    <!-- Begin Contact Overlay -->
-    <section>
-        <div class="contact-overlay overlay overlay-effect form-footer contact-form ">
-            <div class="overlay-container container">
-                <div class="row">
-                    <div class="col-md-11 col-sm-12">
-                        <iframe src="https://go.pardot.com/l/9462/2016-03-07/6tc4d4" width="100%" scrolling="no" allowtransparency="true" id="iFrameContact1" style="border: none; overflow: hidden; height: 352px;"></iframe>
-                    </div>
-                </div>
-                <button type="button" class="contact-overlay-close overlay-close">Close</button>
-            </div>
-        </div>
-    </section>
-
-    <script type="text/javascript">
-    Perficient.utils.whenAvailable("iFrameResize", function () { iFrameResize({ checkOrigin: ['https://go.pardot.com'] }, '#iFrameContact1'); });
-    </script>
-    <!-- End Contact Overlay-->
-
-    <section class="footer-icons">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="hidden-sm-down pull-left">
-                        <li>
-                            <a href="/">
-                                <img src="/assets/img/perficient-logo-grey.png" alt="Perficient, Inc" />
-                            </a>
-                        </li>
-                        <!-- BEGIN FOOTER NAVIGATION -->
-
-                        <li>
-                            <a href='/privacy-policy'>Privacy Policy</a>
-                        </li>
-
-                        <!-- END FOOTER NAVIGATION -->
-                        <li>
-                            © 2020 Perficient, Inc. All Rights Reserved
-                        </li>
-                    </ul>
-                    <!-- Begin Footer Icons-->
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href='https://blogs.perficient.com/'>
-                                <i class="fa fa-rss"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href='http://www.twitter.com/perficient'>
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href='http://www.facebook.com/Perficient'>
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href='http://linkedin.com/company/perficient'>
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href='https://www.youtube.com/user/Perficient'>
-                                <i class="fa fa-youtube"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- End Footer Icons-->
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-
-        <div class="desktop-footer">
-            <div class="footer-slogan">
-                Vision. Execution. Value.
-            </div>
-            <div class="footer-links hidden-md-up">
-                <ul>
-                    <!-- BEGIN FOOTER NAVIGATION MOBILE -->
-
-                    <li>
-                        <a href='/privacy-policy'>Privacy Policy</a>
-                    </li>
-
-                    <!-- END FOOTER NAVIGATION MOBILE -->
-                </ul>
-                <p>© 2020 Perficient, Inc. All Rights Reserved</p>
-            </div>
-            <button class="pull-right hidden-sm-down" type="button" id="contact-trigger-overlay">Contact Us</button>
-            <div class="footer-share">
-                <button class="dropdown-toggle" id="sharethis" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Share This Page
-                </button>
-                <!-- BEGIN SOCIAL MEDIA LINKS -->
-                <!-- AddToAny BEGIN -->
-                <div class="dropdown-menu sharelinks a2a_kit" aria-labelledby="sharethis">
-                    <ul class="list-unstyled">
-                        <li>
-                            <a class="a2a_button_twitter"><i class="fa fa-twitter"></i>Twitter</a>
-                        </li>
-                        <li>
-                            <a class="a2a_button_facebook"><i class="fa fa-facebook-square"></i>Facebook</a>
-                        </li>
-                        <li>
-                            <a class="a2a_button_linkedin"><i class="fa fa-linkedin-square"></i>LinkedIn</a>
-                        </li>
-                        <li>
-                            <a class="a2a_button_email"><i class="fa fa-envelope-o"></i>Email</a>
-                        </li>
-                    </ul>
-                </div>
-                <script async src="https://static.addtoany.com/menu/page.js"></script>
-                <!-- AddToAny END -->
-                <!-- END SOCIAL MEDIA LINKS -->
-            </div>
-        </div>
-
-    </footer>
+@Html.Sitecore().Placeholder("Footer")
     <!-- END NOINDEX -->
 
 
