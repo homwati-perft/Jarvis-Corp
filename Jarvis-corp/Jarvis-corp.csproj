@@ -113,6 +113,7 @@
     <None Include="Properties\PublishProfiles\Jarvis_Corp.pubxml" />
     <Content Include="Web.config" />
     <Content Include="Views\Header.cshtml" />
+    <Content Include="Views\Banner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
