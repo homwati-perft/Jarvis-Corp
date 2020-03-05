@@ -117,6 +117,7 @@
     <Content Include="Views\Header.cshtml" />
     <Content Include="Views\Footer.cshtml" />
     <Content Include="Views\FooterContactUs.cshtml" />
+    <Content Include="Views\Vision.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
