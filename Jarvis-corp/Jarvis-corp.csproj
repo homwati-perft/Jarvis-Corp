@@ -132,6 +132,7 @@
 
     <Content Include="Views\Footer.cshtml" />
     <Content Include="Views\FooterContactUs.cshtml" />
+    <Content Include="Views\Vision.cshtml" />
     <Content Include="Views\Tile.cshtml" />
     <Content Include="Views\TileComponent.cshtml" />
 
