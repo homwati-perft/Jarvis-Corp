@@ -5,12 +5,11 @@
 function closeSearch() {
     document.getElementById("myOverlay").style.display = "none";
 }
-//function load() {
-//    //document.getElementById("loadbox").style.display = "none";
-//    document.getElementsByClassName("morebox").style.display = "none";
-//}
 
-//function loadmore() {
-//    document.getElementById("loadbox").style.display = "block";
-//    document.getElementById("loadMore").style.display = "block";
-//}
+$(document).ready(function () {
+    $('#loadbox article:lt(4)').show();
+    $('#loadMore').on("click",function () {
+        $('#loadbox article').show();
+        $(this).hide();
+    });
+});

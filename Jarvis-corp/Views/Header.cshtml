@@ -66,9 +66,16 @@
                                             <div class="menu-title">
                                                 <a href="" style="width:100px;max-width:200px;">@Html.Sitecore().Field("Title",nav)</a>
                                             </div>
+                                            @{ 
+                                                Sitecore.Data.Fields.MultilistField sublinks = nav.Fields["sub list"];
+                                            }
                                             <div class="menu-block">
                                                 <ul class="list-unstyled">
-                                                    <li class="mega-menu-item"><a href="/services/data">Data</a></li>
+                                                   @foreach (Sitecore.Data.Items.Item link in sublinks.GetItems())
+                                                   {
+                                                    <li class="mega-menu-item"><a href="">@Html.Sitecore().Field("Link Heading",link)</a></li>
+                                                   }
+                                                    @*<li class="mega-menu-item"><a href="/services/data">Data</a></li>
                                                     <li class="mega-menu-item"><a href="/services/design">Design</a></li>
                                                     <li class="mega-menu-item"><a href="/services/marketing">Marketing</a></li>
                                                     <li class="mega-menu-item"><a href="/services/operations">Operations</a></li>
@@ -76,7 +83,7 @@
                                                     <li class="mega-menu-item"><a href="/services/technology">Technology</a></li>
                                                     <li class="mega-menu-item"><a href="/services/digital">Perficient Digital</a></li>
                                                     <li class="mega-menu-item"><a href="/services/cloud">Cloud</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/optimized-global-delivery">Optimized Global Delivery</a></li>
+                                                    <li class="mega-menu-item"><a href="/services/optimized-global-delivery">Optimized Global Delivery</a></li>*@
                                                 </ul>
                                             </div>
                                         </div>
