@@ -6,22 +6,10 @@
 }
 <section class="cards-section" id="cards-section-homepage_acb02eeb49e84309852e937ac043dc2d">
     <div class="cards-container">
-        <div class="card-group general" data-amountCards="4">
+      
+        @Html.Sitecore().DynamicPlaceholder("Tile Part")
 
-            <article class="card col-lg-3 col-md-4 col-sm-12">
-                @Html.Sitecore().DynamicPlaceholder("Left-Tile")
-            </article>
-            <article class="card col-lg-3 col-md-4 col-sm-12">
-                @Html.Sitecore().DynamicPlaceholder("Middle-Left-Tile")
-            </article>
-            <article class="card col-lg-3 col-md-4 col-sm-12">
-                @Html.Sitecore().DynamicPlaceholder("Middle-Right-Tile")
-            </article>
-            <article class="card col-lg-3 col-md-4 col-sm-12">
-                @Html.Sitecore().DynamicPlaceholder("Right-Tile")
-            </article>
-        </div>
-        <div class="button-wrapper">
+        <div class="button-wrapper" id="loadMore">
             <!-- Button below should require localization -->
             <a href="#" class="cardsbutton cardsbutton-style">Load More</a>
         </div>

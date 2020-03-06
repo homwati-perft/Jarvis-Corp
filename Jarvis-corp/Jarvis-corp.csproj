@@ -107,7 +107,6 @@
     <Content Include="Css\Bootstrap\bootstrap.css" />
     <Content Include="Css\perficient-main.css" />
     <Content Include="Css\perficient-override.css" />
-
     <Content Include="Images\card-home-page-digital-transformation.jpg" />
     <Content Include="Images\card-home-page-innovator.jpg" />
     <Content Include="Images\card-home-page-strategic-experts-new.jpg" />
@@ -119,9 +118,7 @@
     <Content Include="Images\home-brand-partnersinhealth_2.jpg" />
     <Content Include="Images\services-marketing-card-image-2.jpg" />
     <Content Include="Images\ss-kiddle-card.jpg" />
-
     <Content Include="JavaScript\Main.js" />
-
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Shared\Jarvis_Corp.cshtml" />
@@ -138,6 +135,8 @@
     <Content Include="Views\Tile.cshtml" />
     <Content Include="Views\TileComponent.cshtml" />
 
+    <Content Include="Views\Tile\TilePart.cshtml" />
+    
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
