@@ -104,21 +104,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Css\Bootstrap\bootstrap.css" />
-    <Content Include="Css\perficient-main.css" />
-    <Content Include="Css\perficient-override.css" />
-    <Content Include="Images\card-home-page-digital-transformation.jpg" />
-    <Content Include="Images\card-home-page-innovator.jpg" />
-    <Content Include="Images\card-home-page-strategic-experts-new.jpg" />
-    <Content Include="Images\card-home-page-trusted-advisor.jpg" />
-    <Content Include="Images\card-palo-alto_2.jpg" />
-    <Content Include="Images\home-big-ideas_2.jpg" />
-    <Content Include="Images\home-brand-hunter-douglas.jpg" />
-    <Content Include="Images\home-brand-linkdin.jpg" />
-    <Content Include="Images\home-brand-partnersinhealth_2.jpg" />
-    <Content Include="Images\services-marketing-card-image-2.jpg" />
-    <Content Include="Images\ss-kiddle-card.jpg" />
-    <Content Include="JavaScript\Main.js" />
+    <Content Include="Assets\Css\Bootstrap\bootstrap.css" />
+    <Content Include="Assets\Css\perficient-main.css" />
+    <Content Include="Assets\Css\perficient-override.css" />
+    <Content Include="Assets\Images\card-home-page-digital-transformation.jpg" />
+    <Content Include="Assets\Images\card-home-page-innovator.jpg" />
+    <Content Include="Assets\Images\card-home-page-strategic-experts-new.jpg" />
+    <Content Include="Assets\Images\card-home-page-trusted-advisor.jpg" />
+    <Content Include="Assets\Images\card-palo-alto_2.jpg" />
+    <Content Include="Assets\Images\home-big-ideas_2.jpg" />
+    <Content Include="Assets\Images\home-brand-hunter-douglas.jpg" />
+    <Content Include="Assets\Images\home-brand-linkdin.jpg" />
+    <Content Include="Assets\Images\home-brand-partnersinhealth_2.jpg" />
+    <Content Include="Assets\Images\services-marketing-card-image-2.jpg" />
+    <Content Include="Assets\Images\ss-kiddle-card.jpg" />
+    <Content Include="Assets\JavaScript\Main.js" />
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Shared\Jarvis_Corp.cshtml" />
@@ -146,6 +146,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Assets\JavaScript\Lib\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>

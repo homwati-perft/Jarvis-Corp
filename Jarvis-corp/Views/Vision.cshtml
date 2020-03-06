@@ -4,6 +4,7 @@
 @{
 
     Sitecore.Data.Fields.MultilistField vision_List = Model.Item.Fields["Vision Button List"];
+    int i = 0;
 }
 @{
     Sitecore.Data.Fields.MultilistField vision_Description_List = Model.Item.Fields["Vision Description List"];
@@ -15,7 +16,7 @@
                 <div class="col-md-12 header-wrap">
                     <div class="text-circle">
                         <div class="circle-content">
-                           @Html.Sitecore().Field("Vision Heading")
+                            @Html.Sitecore().Field("Vision Heading")
                         </div>
                     </div>
                 </div>
@@ -28,42 +29,34 @@
                             foreach (Sitecore.Data.Items.Item vision_Heading_List in vision_List.GetItems())
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#digitalexperience" role="tab">@Html.Sitecore().Field("Vision List Heading", vision_Heading_List)</a>
+                                    <a class="nav-link active" id="@i" onload="abc()" onClick="Test(this.id)" data-toggle="tab" href="#digitalexperience" role="tab">@Html.Sitecore().Field("Vision List Heading", vision_Heading_List)</a>
                                 </li>
+                                i++;
                             }
                         }
                     </ul>
                 </div>
                 <div class="col-md-8 content-container">
                     <!-- Tab panes -->
-                    <div class="tab-content">
+                    <div class="tab-content" id="test">
                         @{
+                            var j = 0;
                             foreach (Sitecore.Data.Items.Item Vision_Description_List in vision_Description_List.GetItems())
                             {
-                                <div class="tab-pane fade in active" id="digitalexperience" role="tabpanel">
-                                    @Html.Sitecore().Field("Vision Image", Vision_Description_List, new { @class = "hero-bg"})        
-                                    <a href='/work/hunter-douglas' class='btn-float'>Hunter Douglas Success Story</a>                                                                                               
-                                         <div class="pane-content">
-                                        <p><strong>@Html.Sitecore().Field("Vision Heading Description", Vision_Description_List)</strong></p>
+
+
+                                <div class="tab-pane fade in active" id="@("comp-"+@j)" role="tabpanel">
+                                    @Html.Sitecore().Field("Vision Image", Vision_Description_List, new { @class = "hero-bg" })
+                                    <a href='/work/hunter-douglas' class='btn-float'>Hunter Douglas Success Story</a>
+                                    <div class="pane-content">
+                                        <p><strong> @Html.Sitecore().Field("Vision Heading Description", Vision_Description_List)</strong></p>
                                     </div>
                                 </div>
+
+
+                                j++;
                             }
                         }
-                        @*<div class="tab-pane fade in active" id="digitalexperience" role="tabpanel">
-                            <img src='/-/media/images/homepage/home-brand-hunter-douglas.jpg?h=675&amp;w=1600&amp;la=en&amp;hash=82E4D336A3CF2E57DB1F7C0BA729A1616D0FAFBB' class='hero-bg' alt='Hunter Douglas' />                                                <a href='/work/hunter-douglas' class='btn-float'>Hunter Douglas Success Story</a>                                                                                                    <div class="pane-content">
-                                <p><strong>Digital experience, digital transformation, mobile first, customer experience &ndash; these are the modern imperatives of our day.&nbsp;</strong>You&rsquo;re facing profound changes driven by digital disruption and the always-connected consumer. Customers are more empowered and demanding than ever before, and you&rsquo;ve got to react with outstanding customer experiences and make your customer the central focal point of processes, programs, systems, and tools.&nbsp; We can help you to map your customer&rsquo;s unique journey and leverage data to predict behavior and deliver superior experiences across channels. The digital and creative capabilities you&rsquo;ll find in <a href="/services/digital">our digital agency</a>, coupled with our deep technology expertise, uniquely position us to enable enterprises to become digital leaders.</p>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade " id="businessoptimization" role="tabpanel">
-                            <img src='/-/media/images/homepage/home-brand-linkdin.jpg?h=675&amp;w=1600&amp;la=en&amp;hash=371BDEB36EA4DD980122DEC2761368730EA40772' class='hero-bg' alt='LinkedIn' />                                                <a href='/work/linkedin' class='btn-float'>LinkedIn Success Story</a>                                                                                                    <div class="pane-content">
-                                <p><strong>It's never been more essential for you to optimize business processes. </strong>As you face ever-changing requirements and financial pressures and deal with fragmented, sub-optimized and non-integrated systems, now is the time. We can help you to reduce drains on productivity and improve your ability to rapidly respond and adapt to changing markets, customers, and partners.&nbsp;We&rsquo;ll help you to improve processes and workflows to make day-to-day activities more efficient and productive. We&rsquo;ll help you to access, process, and share the data you need to succeed and make critical business decisions. Our performance- and data-driven solutions align all business processes and practices within a vision of constant improvement, enhanced productivity, reduced cost, greater efficiency, increased speed and agility, technical integration, and improved customer satisfaction.&nbsp;</p>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade " id="industrysolutions" role="tabpanel">
-                            <img src='/-/media/images/homepage/home-brand-partnersinhealth_2.jpg?h=675&amp;w=1600&amp;la=en&amp;hash=126212F4236C03142AAE5A7B9AB27EB471933E1D' class='hero-bg' alt='' />                                                <a href='/work/partners-in-health' class='btn-float'>Partners in Health Success Story</a>                                                                                                    <div class="pane-content">
-                                <p><strong>Competition in vertical markets is more intense than ever before.</strong> Regulations are becoming more onerous as customer expectations increase daily. The pace of innovation is unprecedented. We&rsquo;ve been working with the world's largest and most recognized companies across a variety of industries, helping business leaders to cultivate meaningful relationships with customers, grow market share, achieve regulatory compliance, and become a known innovator in their space.&nbsp; We know your industry, its intricacies and nuances, its challenges, and the importance of staying on top of ever-evolving marketplaces, customer demands, and regulations. Take advantage of our deep domain expertise, management consulting insights, and industry assets and accelerators to lead in your industry.</p>
-                            </div>
-                        </div>*@
                     </div>
                 </div>
             </div>
