@@ -25,8 +25,8 @@
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
     <link href="~/Css/Bootstrap/bootstrap.css" rel="stylesheet" />
     <!-- inject:css -->
-    <link rel="stylesheet" href="~/Css/perficient-main.css">
-    <link rel="stylesheet" href="~/Css/perficient-override.css">
+    <link rel="stylesheet" href="~/Assets/Css/perficient-main.css">
+    <link rel="stylesheet" href="~/Assets/Css/perficient-override.css">
     <!-- endinject -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,800' rel='stylesheet' type='text/css'>
@@ -38,11 +38,11 @@
 
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.6063/css/CoveoFullSearch.css" />
     <link rel="stylesheet" href="/Coveo/Hive/css/CoveoForSitecore.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script class="coveo-script" type="text/javascript" src='https://static.cloud.coveo.com/searchui/v2.6063/js/CoveoJsSearch.Lazy.min.js'></script>
     <script class="coveo-for-sitecore-script" type="text/javascript" src='/Coveo/Hive/js/CoveoForSitecore.Lazy.min.js'></script>
     <script type="text/javascript" src="/Coveo/Hive/js/cultures/en.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="~/JavaScript/Main.js"></script>
+    <script type="text/javascript" src="~/Assets/JavaScript/Main.js"></script>
     <script src="/dist/js/perficient.js?v=20190909"></script>
     <!-- endinject -->
 </head>
@@ -200,62 +200,9 @@
     </section>
     
     @Html.Sitecore().Placeholder("Tile Component")  
-    <section class="hero hero-tabs">
-
-        <div class="container hero-tabs-container">
-            <div class="row hero-content-block">
-                <div class="col-lg-8 container-wrap">
-                    <div class="row">
-                        <div class="col-md-12 header-wrap">
-                            <div class="text-circle">
-                                <div class="circle-content">
-                                    Vision. Execution. Value.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 tabs-container">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#digitalexperience" role="tab">Digital Experience</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#businessoptimization" role="tab">Business Optimization</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#industrysolutions" role="tab">Industry Solutions</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-8 content-container">
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-
-                                <div class="tab-pane fade in active" id="digitalexperience" role="tabpanel">
-                                    <img src='/-/media/images/homepage/home-brand-hunter-douglas.jpg?h=675&amp;w=1600&amp;la=en&amp;hash=82E4D336A3CF2E57DB1F7C0BA729A1616D0FAFBB' class='hero-bg' alt='Hunter Douglas' />                                                <a href='/work/hunter-douglas' class='btn-float'>Hunter Douglas Success Story</a>                                                                                                    <div class="pane-content">
-                                        <p><strong>Digital experience, digital transformation, mobile first, customer experience &ndash; these are the modern imperatives of our day.&nbsp;</strong>You&rsquo;re facing profound changes driven by digital disruption and the always-connected consumer. Customers are more empowered and demanding than ever before, and you&rsquo;ve got to react with outstanding customer experiences and make your customer the central focal point of processes, programs, systems, and tools.&nbsp; We can help you to map your customer&rsquo;s unique journey and leverage data to predict behavior and deliver superior experiences across channels. The digital and creative capabilities you&rsquo;ll find in <a href="/services/digital">our digital agency</a>, coupled with our deep technology expertise, uniquely position us to enable enterprises to become digital leaders.</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade " id="businessoptimization" role="tabpanel">
-                                    <img src='/-/media/images/homepage/home-brand-linkdin.jpg?h=675&amp;w=1600&amp;la=en&amp;hash=371BDEB36EA4DD980122DEC2761368730EA40772' class='hero-bg' alt='LinkedIn' />                                                <a href='/work/linkedin' class='btn-float'>LinkedIn Success Story</a>                                                                                                    <div class="pane-content">
-                                        <p><strong>It's never been more essential for you to optimize business processes. </strong>As you face ever-changing requirements and financial pressures and deal with fragmented, sub-optimized and non-integrated systems, now is the time. We can help you to reduce drains on productivity and improve your ability to rapidly respond and adapt to changing markets, customers, and partners.&nbsp;We&rsquo;ll help you to improve processes and workflows to make day-to-day activities more efficient and productive. We&rsquo;ll help you to access, process, and share the data you need to succeed and make critical business decisions. Our performance- and data-driven solutions align all business processes and practices within a vision of constant improvement, enhanced productivity, reduced cost, greater efficiency, increased speed and agility, technical integration, and improved customer satisfaction.&nbsp;</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade " id="industrysolutions" role="tabpanel">
-                                    <img src='/-/media/images/homepage/home-brand-partnersinhealth_2.jpg?h=675&amp;w=1600&amp;la=en&amp;hash=126212F4236C03142AAE5A7B9AB27EB471933E1D' class='hero-bg' alt='' />                                                <a href='/work/partners-in-health' class='btn-float'>Partners in Health Success Story</a>                                                                                                    <div class="pane-content">
-                                        <p><strong>Competition in vertical markets is more intense than ever before.</strong> Regulations are becoming more onerous as customer expectations increase daily. The pace of innovation is unprecedented. We&rsquo;ve been working with the world's largest and most recognized companies across a variety of industries, helping business leaders to cultivate meaningful relationships with customers, grow market share, achieve regulatory compliance, and become a known innovator in their space.&nbsp; We know your industry, its intricacies and nuances, its challenges, and the importance of staying on top of ever-evolving marketplaces, customer demands, and regulations. Take advantage of our deep domain expertise, management consulting insights, and industry assets and accelerators to lead in your industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- row -->
-                </div>
-            </div>
-        </div>
+    
+       <section class="hero hero-tabs">
+           @Html.Sitecore().Placeholder("Vision")
     </section>
     <section class="hero hero-jumbotext">
         <img src='/-/media/images/homepage/home-big-ideas_2.jpg?h=669&amp;w=1600&amp;la=en&amp;hash=1079D875C554D9DBBDC220DA86AE921E5715C2E1' class='hero-bg' alt='' />

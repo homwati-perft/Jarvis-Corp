@@ -1,0 +1,66 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+    Sitecore.Data.Fields.MultilistField vision_List = Model.Item.Fields["Vision Button List"];
+    int i = 0;
+}
+@{
+    Sitecore.Data.Fields.MultilistField vision_Description_List = Model.Item.Fields["Vision Description List"];
+}
+<div class="container hero-tabs-container">
+    <div class="row hero-content-block">
+        <div class="col-lg-8 container-wrap">
+            <div class="row">
+                <div class="col-md-12 header-wrap">
+                    <div class="text-circle">
+                        <div class="circle-content">
+                            @Html.Sitecore().Field("Vision Heading")
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 tabs-container">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        @{
+                            foreach (Sitecore.Data.Items.Item vision_Heading_List in vision_List.GetItems())
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="@i" onload="abc()" onClick="Test(this.id)" data-toggle="tab" href="#digitalexperience" role="tab">@Html.Sitecore().Field("Vision List Heading", vision_Heading_List)</a>
+                                </li>
+                                i++;
+                            }
+                        }
+                    </ul>
+                </div>
+                <div class="col-md-8 content-container">
+                    <!-- Tab panes -->
+                    <div class="tab-content" id="test">
+                        @{
+                            var j = 0;
+                            foreach (Sitecore.Data.Items.Item Vision_Description_List in vision_Description_List.GetItems())
+                            {
+
+
+                                <div class="tab-pane fade in active" id="@("comp-"+@j)" role="tabpanel">
+                                    @Html.Sitecore().Field("Vision Image", Vision_Description_List, new { @class = "hero-bg" })
+                                    <a href='/work/hunter-douglas' class='btn-float'>Hunter Douglas Success Story</a>
+                                    <div class="pane-content">
+                                        <p><strong> @Html.Sitecore().Field("Vision Heading Description", Vision_Description_List)</strong></p>
+                                    </div>
+                                </div>
+
+
+                                j++;
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+    </div>
+</div>
