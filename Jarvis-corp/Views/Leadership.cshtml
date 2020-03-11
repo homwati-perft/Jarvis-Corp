@@ -1,0 +1,65 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<section class="profile-overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 prft-heading">
+                <h1>@Html.Sitecore().Field("Heading")</h1>
+            </div>
+        </div>
+        <div class="row">
+            @{ 
+                Sitecore.Data.Fields.MultilistField leadership = Model.Item.Fields["Leaders List"];
+                int i = 0;
+            }
+        @foreach (Sitecore.Data.Items.Item Leaders in leadership.GetItems())
+        {
+            <div class="profile-col profile-overlay-wrapper">
+                <div class="profile-block" id="@i" onclick="OpenLeader(this.id)">
+                    @Html.Sitecore().Field("Leader Profile Image",Leaders,new { @class = "img-responsive" })
+                    <h2>@Html.Sitecore().Field("Leader Name",Leaders)</h2>
+                    <h2>@Html.Sitecore().Field("Leader Designation", Leaders)</h2>
+                </div>
+
+                <div class="overlay-block" style="display: none;top:150px" id="Profile-Wrap-@i">
+                    <h1 class="close-overlay"  style="top:30%">
+                        @*<span class="mobile-close">
+                            <i class="fa fa-angle-left">
+                            </i> Back
+                        </span>*@
+                        <span class="desktop-close" onclick="CloseLeader(@i)">&times;</span>
+                    </h1>
+                    <div class="container content-container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="row">
+                                    <div class="col-xs-4 col-md-12 profile-pic">
+                                        @Html.Sitecore().Field("Leader Profile Image", Leaders, new { @class = "img-responsive" })
+                                    </div>
+                                    <div class="col-xs-8 col-md-12 profile-details">
+                                        <h2>@Html.Sitecore().Field("Leader Name", Leaders)</h2>
+                                        <h2>@Html.Sitecore().Field("Leader Designation", Leaders)</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <blockquote></blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 biography">
+                               @Html.Sitecore().Field("Leader Introduction", Leaders)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            i++;
+        }
+        </div>
+    </div>
+</section>

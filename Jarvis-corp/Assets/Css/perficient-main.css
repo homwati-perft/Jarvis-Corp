@@ -2730,14 +2730,12 @@ header {
             border-bottom: 2px solid #cc1f20;
             text-decoration: none; }
   .dropdown-menu.mega-menu span {
-    position: absolute;
     top: 10px;
     right: 10px;
     color: #fff;
-    width: 40px;
     height: 40px;
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 1.4rem;
     z-index: 1;
     display: block; }
   li.nav-item.close .dropdown-menu.mega-menu {
@@ -9886,10 +9884,8 @@ a.img-responsive {
 	   }
 	}
 
-    /*.moreBox{
-        display:none;
-    }*/
-
-    #loadbox article{ display:none;
+    .biography{
+        font-size: 1.6rem;
     }
+    
 
