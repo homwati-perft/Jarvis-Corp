@@ -1,0 +1,17 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<a href="/work/linkedin">
+    <div class="tile-block tile-img">
+        @Html.Sitecore().Field("Service Image", new { @class= "img-responsive" })
+    </div>
+    <div class="tile-block tile-content ">
+        <figcaption>Technology</figcaption>
+        <div class="tile-content-wrap">
+            <h2 class="tile-title">@Html.Sitecore().Field("Service Heading")</h2>
+        </div>
+    </div>
+</a>

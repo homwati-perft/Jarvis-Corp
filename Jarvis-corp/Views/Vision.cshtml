@@ -29,7 +29,7 @@
                             foreach (Sitecore.Data.Items.Item vision_Heading_List in vision_List.GetItems())
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="@i" onload="abc()" onClick="Test(this.id)" data-toggle="tab" href="#digitalexperience" role="tab">@Html.Sitecore().Field("Vision List Heading", vision_Heading_List)</a>
+                                    <a class="nav-link active" id="@i" onClick="Test(this.id)" data-toggle="tab" href="#digitalexperience" role="tab">@Html.Sitecore().Field("Vision List Heading", vision_Heading_List)</a>
                                 </li>
                                 i++;
                             }
@@ -40,7 +40,7 @@
                     <!-- Tab panes -->
                     <div class="tab-content" id="test">
                         @{
-                            var j = 0;
+                            int j = 0;
                             foreach (Sitecore.Data.Items.Item Vision_Description_List in vision_Description_List.GetItems())
                             {
 

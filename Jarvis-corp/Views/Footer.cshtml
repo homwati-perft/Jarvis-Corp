@@ -1,23 +1,28 @@
 ﻿@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
+@using Sitecore.Links
 @model RenderingModel
 @{
     Sitecore.Data.Fields.MultilistField social_Media_List = Model.Item.Fields["Social Media List"];
+    Sitecore.Data.Fields.LinkField Privacy_Policy_Link = Model.Item.Fields["Privacy Policy Link"];
+    Sitecore.Data.Fields.LinkField Footer_Logo_Link = Model.Item.Fields["Footer Logo Link"];
 }
+
 <section class="footer-icons">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <ul class="hidden-sm-down pull-left">
                     <li>
-                        <a href="/">
+                        <a href="@Footer_Logo_Link.Url">
                             @Html.Sitecore().Field("Company Logo")
                         </a>
                     </li>
                     <!-- BEGIN FOOTER NAVIGATION -->
 
                     <li>
-                        <a href='/privacy-policy'>@Html.Sitecore().Field("Privacy Policy Link Heading")</a>
+                      
+                        <a href='@Privacy_Policy_Link.Url'>@Html.Sitecore().Field("Privacy Policy Link Heading")</a>
                     </li>
 
                     <!-- END FOOTER NAVIGATION -->
@@ -50,6 +55,7 @@
                 <!-- BEGIN FOOTER NAVIGATION MOBILE -->
 
                 <li>
+                    <h4>@Privacy_Policy_Link.Url</h4>
                     <a href='/privacy-policy'>@Html.Sitecore().Field("Privacy Policy Heading")</a>
                 </li>
 
@@ -70,7 +76,7 @@
                         foreach (Sitecore.Data.Items.Item social_Media in social_Media_List.GetItems())
                         {
                             <li>
-                                <a class="a2a_button_twitter">@Html.Sitecore().Field("Social Media Logo", social_Media)</a>
+                                <a class="a2a_button_twitter" >@Html.Sitecore().Field("Social Media Logo", social_Media)</a>
                             </li>
                         }
                     }
