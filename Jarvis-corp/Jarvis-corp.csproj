@@ -133,9 +133,11 @@
     <Content Include="Views\Vision.cshtml" />
     <Content Include="Views\Tile.cshtml" />
     <Content Include="Views\TileComponent.cshtml" />
+
     <Content Include="Views\Tile\TilePart.cshtml" />
     <Content Include="Views\Services.cshtml" />
     <Content Include="Views\servicesLinks.cshtml" />
+    <Content Include="Views\Leadership.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
