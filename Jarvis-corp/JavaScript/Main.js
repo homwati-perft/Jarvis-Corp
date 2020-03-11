@@ -13,3 +13,11 @@ $(document).ready(function () {
         $(this).hide();
     });
 });
+
+function OpenLeader(id) {
+    console.log("hhgjhhj>>>>>>>>>>>>",id);
+    document.getElementById("Profile-Wrap-"+id).style.display = "block";
+}
+function CloseLeader(id) {
+    document.getElementById("Profile-Wrap-"+id).style.display = "none";
+}

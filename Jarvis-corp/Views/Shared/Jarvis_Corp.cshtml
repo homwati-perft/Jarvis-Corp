@@ -3,16 +3,16 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-  Layout = null;
+    Layout = null;
 }
 <!DOCTYPE html>
 <html>
 <head>
     <!-- BEGIN NOINDEX -->
-    <title>@Html.Sitecore().Field("Meta Title", new { DisableWebEdit = true})</title>
+    <title>@Html.Sitecore().Field("Meta Title", new { DisableWebEdit = true })</title>
     <!-- END NOINDEX -->
-    
-    <meta name="description" content="@Html.Sitecore().Field("Meta Description", new { DisableWebEdit = true})"/>
+
+    <meta name="description" content="@Html.Sitecore().Field("Meta Description", new { DisableWebEdit = true})" />
     <link rel="canonical" href="https://www.perficient.com/" />
     <meta charset="utf-8">
     <!--[if gt IE 8]><!-->
@@ -50,307 +50,31 @@
     @Html.Sitecore().Placeholder("Header")
     <!-- END NOINDEX -->
 
+    @Html.Sitecore().Placeholder("Banner")
 
 
-
-@Html.Sitecore().Placeholder("Banner")
-
-
-
-                <article class="card col-lg-3 col-md-4 col-sm-12">
-                    <a href='/digital-transformation' target='_blank'>
-                        <div class="card-content">
-                            <figure>
-                                <img src='/-/media/images/homepage/card-home-page-digital-transformation.jpg?h=204&amp;w=276&amp;la=en&amp;hash=7DBEF3E0FAEC0565ABA18FD40C559371C4D7C71B' class='img-responsive hidden-xs' alt='' />                                            <figcaption>DT Leader</figcaption>
-                            </figure>
-                            <div class="card-block">
-                                <h4 class="card-title">Outpace Disruption and Deliver for Your Customers with Digital Transformation Powered by Perficient</h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-
-                <article class="card col-lg-3 col-md-4 col-sm-12">
-                    <a href='https://blogs.perficient.com/' target='_blank'>
-                        <div class="card-content">
-                            <figure>
-                                <img src='/-/media/images/homepage/card-home-page-strategic-experts-new.jpg?h=204&amp;w=276&amp;la=en&amp;hash=3DC008BEDCC19E977F9F7937333C1C907B7D4BD1' class='img-responsive hidden-xs' alt='' />                                            <figcaption>Strategic Experts</figcaption>
-                            </figure>
-                            <div class="card-block">
-                                <h4 class="card-title">Get the Latest Business Insights from Our Thought Leaders</h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card col-lg-3 col-md-4 col-sm-12">
-                    <a href='/work'>
-                        <div class="card-content">
-                            <figure>
-                                <img src='/-/media/images/homepage/card-home-page-innovator.jpg?h=204&amp;w=276&amp;la=en&amp;hash=721AE6E631A5D00434209B107D1AECDF66D2EFF6' class='img-responsive hidden-xs' alt='' />                                            <figcaption>Innovator</figcaption>
-                            </figure>
-                            <div class="card-block">
-                                <h4 class="card-title">Experience Innovative and Impactful Solutions Delivered to Our Clients</h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card col-lg-3 col-md-4 col-sm-12">
-                    <a href='/about' target='_blank'>
-                        <div class="card-content">
-                            <figure>
-                                <img src='/-/media/images/homepage/card-home-page-trusted-advisor.jpg?h=204&amp;w=276&amp;la=en&amp;hash=6E283ECB967607ECC834FA1EC668A1C8FF06BC1B' class='img-responsive hidden-xs' alt='' />                                            <figcaption>Trusted Advisor</figcaption>
-                            </figure>
-                            <div class="card-block">
-                                <h4 class="card-title">Feel Secure and Partner with an AICPA SOC 2 Compliant Enterprise</h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card col-lg-3 col-md-4 col-sm-12">
-                    <a href='/work/palo-alto-networks'>
-                        <div class="card-content">
-                            <figure>
-                                <img src='/-/media/images/homepage/card-palo-alto_2.jpg?h=204&amp;w=276&amp;la=en&amp;hash=9AD93257A6967FC8F1157A61B283EFAB7DC268EA' class='img-responsive hidden-xs' alt='' />                                            <figcaption>Cloud</figcaption>
-                            </figure>
-                            <div class="card-block">
-                                <h4 class="card-title">How We Drove Personalized Service with an Operations Strategy</h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card col-lg-3 col-md-4 col-sm-12">
-                    <a href='/work/kidde'>
-                        <div class="card-content">
-                            <figure>
-                                <img src='/-/media/images/work/kidde/ss-kiddle-card.jpg?h=204&amp;w=276&amp;la=en&amp;hash=AF6B092CCD4005E23CA09EBDB16AB577976BF79B' class='img-responsive hidden-xs' alt='' />                                            <figcaption>Commerce</figcaption>
-                            </figure>
-                            <div class="card-block">
-                                <h4 class="card-title">How We Helped a Leading Manufacturer be Mobile-friendly and More Secure</h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card col-lg-3 col-md-4 col-sm-12">
-                    <a href='/insights/guides/2019/top-5-digital-health-trends-for-providers'>
-                        <div class="card-content">
-                            <figure>
-                                <img src='/-/media/images/healthcare/top-5-digital-health-trends-for-providers/top-5-digital-health-trends-for-providers-guide.jpeg?h=204&amp;w=276&amp;la=en&amp;hash=8EEB2DA41755EA3D0A0230DE336AF7814AB4F672' class='img-responsive hidden-xs' alt='' />                                            <figcaption>Healthcare</figcaption>
-                            </figure>
-                            <div class="card-block">
-                                <h4 class="card-title">Top 5 Digital Health Trends for Providers</h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card col-lg-3 col-md-4 col-sm-12">
-                    <a href='/services/digital'>
-                        <div class="card-content">
-                            <figure>
-                                <img src='/-/media/images/services/services-cards/services-marketing-card-image-2.jpg?h=204&amp;w=276&amp;la=en&amp;hash=44297555DA65C70C26FBFC20F148DAA4A725D445' class='img-responsive hidden-xs' alt='' />                                            <figcaption>Marketing</figcaption>
-                            </figure>
-                            <div class="card-block">
-                                <h4 class="card-title">Acquire, Engage and Retain Your Customers: We Can Help</h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-
-            </div>
-            <div class="button-wrapper">
-                <!-- Button below should require localization -->
-                <a href="#" class="cardsbutton cardsbutton-style">Load More</a>
-            </div>
-        </div>
-    </section>    <section class="hero hero-tabs">
-
-    <section class="hero hero-block solid" id="hero-main" style="display: none">
-        <div class="hero-slide-menu">
-            <div class="hero-slide-slant"></div>
-            <button class="btn-hero-menu"><span class="slide-btn-open">&#62;</span><span class="slide-btn-close">&#215;</span></button>
-            <ul class="nav slide-nav">
-                <li data-slideid="0"><a href="#">Perficient Acquires MedTouch</a></li>
-                <li data-slideid="1"><a href="#">Digital Marketing Conference</a></li>
-                <li data-slideid="2"><a href="#">VITAS gets a 2000% Increase in Site Traffic </a></li>
-                <li data-slideid="3"><a href="#">The Executive&#39;s Guide to Intelligent Automation </a></li>
-                <li data-slideid="4"><a href="#">Vlocity Improves Case Deflection by 50% Month Over Month</a></li>
-            </ul>
-        </div>
-        <div class="hero-background-container">
-            <img class="hero-background large-loaded" src=/-/media/images/homepage/hero-2020-final-orion-lg.jpg
-                 data-mobile-image=/-/media/images/homepage/hero-2020-final-orion-sm.jpg
-                 data-image=/-/media/images/homepage/hero-2020-final-orion-lg.jpg />
-            <div class="hero-caption"></div>
-        </div>
-        <div class="color-container" style="background: no-repeat right bottom/85%;">
-            <i class="icon icon-blockangle" style="color: #9e8b6a"></i>
-            <div class="hero-content">
-                <h1>Perficient Acquires MedTouch</h1>
-
-                <p>Strengthens our healthcare industry expertise and digital marketing capabilities</p>
-                <a href="/about/news-releases/2020/perficient-announces-acquisition-of-medtouch" class="btn-hero">Learn More</a>
-            </div>
-        </div>
-    </section>
-    
-    @Html.Sitecore().Placeholder("Tile Component")  
-    <section class="hero hero-tabs">
-
-        <div class="container hero-tabs-container">
-            <div class="row hero-content-block">
-                <div class="col-lg-8 container-wrap">
-                    <div class="row">
-                        <div class="col-md-12 header-wrap">
-                            <div class="text-circle">
-                                <div class="circle-content">
-                                    Vision. Execution. Value.
-                                </div>
-                            </div>
-                        </div>
+        @Html.Sitecore().Placeholder("Tile Component")
+        
+        @Html.Sitecore().Placeholder("Leadership Component")
+        
+        <section class="hero hero-jumbotext">
+            <img src='/-/media/images/homepage/home-big-ideas_2.jpg?h=669&amp;w=1600&amp;la=en&amp;hash=1079D875C554D9DBBDC220DA86AE921E5715C2E1' class='hero-bg' alt='' />
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 hero-content">
+                        <h1>
+                            READY FOR SOME BIG IDEAS?
+                        </h1>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 tabs-container">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist">
-
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#digitalexperience" role="tab">Digital Experience</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#businessoptimization" role="tab">Business Optimization</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#industrysolutions" role="tab">Industry Solutions</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-8 content-container">
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-
-                                <div class="tab-pane fade in active" id="digitalexperience" role="tabpanel">
-                                    <img src='/-/media/images/homepage/home-brand-hunter-douglas.jpg?h=675&amp;w=1600&amp;la=en&amp;hash=82E4D336A3CF2E57DB1F7C0BA729A1616D0FAFBB' class='hero-bg' alt='Hunter Douglas' />                                                <a href='/work/hunter-douglas' class='btn-float'>Hunter Douglas Success Story</a>                                                                                                    <div class="pane-content">
-                                        <p><strong>Digital experience, digital transformation, mobile first, customer experience &ndash; these are the modern imperatives of our day.&nbsp;</strong>You&rsquo;re facing profound changes driven by digital disruption and the always-connected consumer. Customers are more empowered and demanding than ever before, and you&rsquo;ve got to react with outstanding customer experiences and make your customer the central focal point of processes, programs, systems, and tools.&nbsp; We can help you to map your customer&rsquo;s unique journey and leverage data to predict behavior and deliver superior experiences across channels. The digital and creative capabilities you&rsquo;ll find in <a href="/services/digital">our digital agency</a>, coupled with our deep technology expertise, uniquely position us to enable enterprises to become digital leaders.</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade " id="businessoptimization" role="tabpanel">
-                                    <img src='/-/media/images/homepage/home-brand-linkdin.jpg?h=675&amp;w=1600&amp;la=en&amp;hash=371BDEB36EA4DD980122DEC2761368730EA40772' class='hero-bg' alt='LinkedIn' />                                                <a href='/work/linkedin' class='btn-float'>LinkedIn Success Story</a>                                                                                                    <div class="pane-content">
-                                        <p><strong>It's never been more essential for you to optimize business processes. </strong>As you face ever-changing requirements and financial pressures and deal with fragmented, sub-optimized and non-integrated systems, now is the time. We can help you to reduce drains on productivity and improve your ability to rapidly respond and adapt to changing markets, customers, and partners.&nbsp;We&rsquo;ll help you to improve processes and workflows to make day-to-day activities more efficient and productive. We&rsquo;ll help you to access, process, and share the data you need to succeed and make critical business decisions. Our performance- and data-driven solutions align all business processes and practices within a vision of constant improvement, enhanced productivity, reduced cost, greater efficiency, increased speed and agility, technical integration, and improved customer satisfaction.&nbsp;</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade " id="industrysolutions" role="tabpanel">
-                                    <img src='/-/media/images/homepage/home-brand-partnersinhealth_2.jpg?h=675&amp;w=1600&amp;la=en&amp;hash=126212F4236C03142AAE5A7B9AB27EB471933E1D' class='hero-bg' alt='' />                                                <a href='/work/partners-in-health' class='btn-float'>Partners in Health Success Story</a>                                                                                                    <div class="pane-content">
-                                        <p><strong>Competition in vertical markets is more intense than ever before.</strong> Regulations are becoming more onerous as customer expectations increase daily. The pace of innovation is unprecedented. We&rsquo;ve been working with the world's largest and most recognized companies across a variety of industries, helping business leaders to cultivate meaningful relationships with customers, grow market share, achieve regulatory compliance, and become a known innovator in their space.&nbsp; We know your industry, its intricacies and nuances, its challenges, and the importance of staying on top of ever-evolving marketplaces, customer demands, and regulations. Take advantage of our deep domain expertise, management consulting insights, and industry assets and accelerators to lead in your industry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- row -->
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="hero hero-jumbotext">
-        <img src='/-/media/images/homepage/home-big-ideas_2.jpg?h=669&amp;w=1600&amp;la=en&amp;hash=1079D875C554D9DBBDC220DA86AE921E5715C2E1' class='hero-bg' alt='' />
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 hero-content">
-                    <h1>
-                        READY FOR SOME BIG IDEAS?
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+
+        @Html.Sitecore().Placeholder("Footer With Contact Us")
+       
 
 
-
-
-
-    <!-- BEGIN NOINDEX -->
-    <!-- BEGIN NOINDEX -->
-    @Html.Sitecore().Placeholder("Footer With Contact Us")
-    <!-- END NOINDEX -->
-
-
-@Html.Sitecore().Placeholder("Footer")
-    <!-- END NOINDEX -->
-
-
-
-    <script type="text/javascript">
-        $.advancedHero.slides = [
-  {
-    "slideImage": "/-/media/images/homepage/hero-2020-final-orion-lg.jpg",
-    "contentBgColor": "solid",
-    "contentHexColor": "9e8b6a",
-    "textureImage": "",
-    "heading": "Perficient Acquires MedTouch",
-    "content": "<p>Strengthens our healthcare industry expertise and digital marketing capabilities</p>",
-    "buttonText": "Learn More",
-    "buttonActionURL": "/about/news-releases/2020/perficient-announces-acquisition-of-medtouch",
-    "caption": "<a href=\"#\"></a>",
-    "mobileImage": "/-/media/images/homepage/hero-2020-final-orion-sm.jpg"
-  },
-  {
-    "slideImage": "/-/media/images/homepage/2019_next10_homehero_lg_1600x619.jpg",
-    "contentBgColor": "teal-dark",
-    "contentHexColor": "",
-    "textureImage": "",
-    "heading": "Digital Marketing Conference",
-    "content": "<p>Align your business with the future of digital marketing at Next10x, a one-day conference.</p>",
-    "buttonText": "Visit the Next10x site",
-    "buttonActionURL": "https://next10x.perficientdigital.com/?utm_source=perficient&utm_medium=website&utm_campaign=homepage-banner",
-    "caption": "<a href=\"https://www.stonetemple.com/next10x-conference/\"></a>",
-    "mobileImage": "/-/media/images/homepage/2019_next10_homehero_sm_640x322.jpg"
-  },
-  {
-    "slideImage": "/-/media/images/work/vitas/css_vitas_healthcare_home_lg.png",
-    "contentBgColor": "blue-dark",
-    "contentHexColor": "",
-    "textureImage": "",
-    "heading": "VITAS gets a 2000% Increase in Site Traffic ",
-    "content": "",
-    "buttonText": "See How",
-    "buttonActionURL": "/work/vitas",
-    "caption": "<a href=\"#\"></a>",
-    "mobileImage": "/-/media/images/work/vitas/css_vitas_healthcare_home_sm.png"
-  },
-  {
-    "slideImage": "/-/media/images/homepage/2019_automation_homehero_lg_new.jpg",
-    "contentBgColor": "red solid",
-    "contentHexColor": "",
-    "textureImage": "",
-    "heading": "The Executive's Guide to Intelligent Automation ",
-    "content": "<p>Start leveraging automation technologies to drive digital transformation.</p>",
-    "buttonText": "Get the Guide",
-    "buttonActionURL": "https://www.perficient.com/insights/guides/2020/the-executives-guide-to-intelligent-automation",
-    "caption": "<a href=\"#\"></a>",
-    "mobileImage": "/-/media/images/homepage/2019_automation_homehero_sm_new.jpg"
-  },
-  {
-    "slideImage": "/-/media/images/work/vlocity/css_vlocity_homehero_lg.png",
-    "contentBgColor": "charcoal",
-    "contentHexColor": "",
-    "textureImage": "",
-    "heading": "Vlocity Improves Case Deflection by 50% Month Over Month",
-    "content": "",
-    "buttonText": "Lean More About Their Rapid Success",
-    "buttonActionURL": "/work/vlocity",
-    "caption": "<a href=\"#\"></a>",
-    "mobileImage": "/-/media/images/work/vlocity/css_vlocity_homehero_sm.png"
-  }
-];
-        $(document).ready(function () {
-    $.advancedHero.init('#hero-main');
-});
-    </script>
+        @Html.Sitecore().Placeholder("Footer")
+        
 </body>
 </html>
