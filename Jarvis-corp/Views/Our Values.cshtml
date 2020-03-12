@@ -2,7 +2,7 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-
+    Sitecore.Data.Fields.MultilistField.GetItems()
 }
 <div>
     <section class="three-four-up" id="our-values">
@@ -11,7 +11,7 @@
                 <h1>@Html.Sitecore().Field("Common Title")</h1>
             </div>
             <article>
-                <i>@Html.Sitecore().Field("Image", new { field }</i>
+                <i>@Html.Sitecore().Field("Image", new { @class = "classname" }</i>    
                 <h2>@Html.Sitecore().Field("Value Title")</h2>    
                 <p>We’re forthright and ethical, always.</p>
             </article>

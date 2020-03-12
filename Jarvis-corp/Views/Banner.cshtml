@@ -25,7 +25,9 @@
         <div class="hero-content">
             <h1 style="color:black">@Html.Sitecore().Field("Title")</h1>
             <p style="color:black">@Html.Sitecore().Field("Introduction")</p>
-            <a href="" class="btn-hero" style="background:black ">@Html.Sitecore().Field("Link Heading")</a>
+            <a href="" class="btn-hero" style="background:black ">
+            @Html.Sitecore().Field("Link Heading")
+            @Html.Sitecore().Field("Link")</a>
         </div>
     </div>
 </section>
