@@ -1,0 +1,45 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<div>
+    <section class="three-four-up" id="our-values">
+        <div class="container">
+            <div class="corp-header">
+                <h1>@Html.Sitecore().Field("Common Title")</h1>
+            </div>
+            <article>
+                <i>@Html.Sitecore().Field("Image", new { field }</i>
+                <h2>@Html.Sitecore().Field("Value Title")</h2>    
+                <p>We’re forthright and ethical, always.</p>
+            </article>
+            <article>
+                <i><img src="/-/media/images/icon-pen.png?h=84&amp;w=83&amp;la=en&amp;hash=2710E6F27E3C79052788E9E44768ECB4D030AD42" alt="icon star"></i>
+                <h2>@Html.Sitecore().Field("Value Title")</h2>
+                <p>We’re pragmatic adventurers and curious explorers. We strive for the new and thrive on the proven.</p>
+            </article>
+            <article>
+                <i><img src="/-/media/images/icon-light.png?h=94&amp;w=64&amp;la=en&amp;hash=020C4B2EB12800D9D94796239B1368956C40EBDA" alt="icon star"></i>
+                <h2>People</h2>
+                <p>We treasure talent, embrace effort and reward results. We cultivate a culture that challenges and champions great people.</p>
+            </article>
+            <article>
+                <i><img src="/-/media/images/icon-star.png?h=93&amp;w=98&amp;la=en&amp;hash=11A688C10A0971E72EF340045E5ADDAE93F2A678" alt="icon star"></i>
+                <h2>Pride</h2>
+                <p>We’re proud of Perficient. We pursue excellence on behalf of our clients, our colleagues and our shareholders – and when we achieve, it feels great.</p>
+            </article>
+            <article>
+                <i><img src="/-/media/images/icon-zoom.png?h=85&amp;w=85&amp;la=en&amp;hash=C0BC994A3C833965FF3F7A96163E8D650529B9DA" alt="icon zoom"></i>
+                <h2>Clients</h2>
+                <p>We understand instinctively that we succeed only when our customers do.</p>
+            </article>
+            <article>
+                <i><img src="/-/media/images/icon-trophy.png?h=76&amp;w=82&amp;la=en&amp;hash=80E7BD3BA2941A2EB04E34EB51F67AF442731D63" alt="icon one perficient"></i>
+                <h2>Collaboration</h2>
+                <p>We work cooperatively and confidently. Our commitment to greatness is best achieved together.</p>
+            </article>
+        </div>
+    </section>
+</div>

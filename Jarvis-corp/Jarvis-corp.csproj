@@ -114,6 +114,7 @@
     <Content Include="Web.config" />
     <Content Include="Views\Header.cshtml" />
     <Content Include="Views\Banner.cshtml" />
+    <Content Include="Views\Our Values.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
