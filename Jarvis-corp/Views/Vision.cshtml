@@ -29,7 +29,7 @@
                             foreach (Sitecore.Data.Items.Item vision_Heading_List in vision_List.GetItems())
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="@i" onClick="Test(this.id)" data-toggle="tab" href="#digitalexperience" role="tab">@Html.Sitecore().Field("Vision List Heading", vision_Heading_List)</a>
+                                    <a class="nav-link active" id="@i" onClick="Vision(this.id)" data-toggle="tab" href="#digitalexperience" role="tab">@Html.Sitecore().Field("Vision List Heading", vision_Heading_List)</a>
                                 </li>
                                 i++;
                             }
@@ -47,7 +47,7 @@
 
                                 <div class="tab-pane fade in active" id="@("comp-"+@j)" role="tabpanel">
                                     @Html.Sitecore().Field("Vision Image", Vision_Description_List, new { @class = "hero-bg" })
-                                    <a href='/work/hunter-douglas' class='btn-float'>Hunter Douglas Success Story</a>
+                                    @*<a href='/work/hunter-douglas' class='btn-float'>Hunter Douglas Success Story</a>*@
                                     <div class="pane-content">
                                         <p><strong> @Html.Sitecore().Field("Vision Heading Description", Vision_Description_List)</strong></p>
                                     </div>

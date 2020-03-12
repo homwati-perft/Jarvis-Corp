@@ -20,17 +20,20 @@ $(document).ready(function () {
 function onLoad() {
     console.log("finally calleds")
 }
-function Test(clicked) {
+function Vision(clicked) {
     var els = document.getElementsByClassName("tab-pane");
+    
     var myFunc = function myFunction(item) {
         if (item.id == "comp-" + clicked) {
-            console.log("item.id>>>>", item.id)
+           
             document.getElementById(item.id).style.display = "block";
         } else {
+            
             document.getElementById(item.id).style.display = "none";
         }
     }
     Array.prototype.forEach.call(els, myFunc);
+    
 }
 
 //$(document).ready(function () {
