@@ -1,0 +1,21 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<div class="card-footer" style="height: 92px;">
+    <div class="event-column event-host">
+        <div class="profile-label">
+            <div class="profile-row">
+                <div class="content-container img-wrapper">
+                @Html.Sitecore().Field("Photo", new {@class="img-profile" })
+                </div>
+                <div class="content-container content-wrapper">
+                    <h5>@Html.Sitecore().Field("Name")</h5>
+                    <h6>@Html.Sitecore().Field("Designation")</h6>
+                </div>
+            </div>
+        </div>     
+    </div>
+</div>
