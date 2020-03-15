@@ -10,12 +10,20 @@ $(document).ready(function () {
     $("#test .tab-pane").hide();
     $("#test .tab-pane:first").show();
 
+
+    $('#servicesLink article a').hide();
+    $('#servicesLink article a:lt(2)').show();
+    $('#loadServices').on("click", function () {
+        $('#servicesLink article a').show();
+        $(this).hide();
+    });
+
     $('#loadbox article:lt(4)').show();
     $('#loadMore').on("click", function () {
         $('#loadbox article').show();
         $(this).hide();
     });
-    
+
 });
 function onLoad() {
     console.log("finally calleds")

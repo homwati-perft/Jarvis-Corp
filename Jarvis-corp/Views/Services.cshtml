@@ -13,10 +13,13 @@
             </div>
             <div class="col-md-8">
                 <div class="tiles-row">
-                    <div class="tile-flex">
+                    <div class="tile-flex" id="servicesLink">
                         <article class="tile">
                             @Html.Sitecore().DynamicPlaceholder("Services Links")
                         </article>
+                        @*<article class="tile">
+                            @Html.Sitecore().DynamicPlaceholder("Services Links Vertical")
+                        </article>*@
                         @*<article class="tile">
                             <a href="/work/gopro">
                                 <div class="tile-block tile-img">
@@ -47,7 +50,7 @@
                         </article>*@
                     </div>
                 </div>
-                <div class="tiles-row hidden">
+                @*<div class="tiles-row hidden">
                     <div class="tile-flex">
                         <article class="tile">
                             <a href="/work/analytical-graphics-inc">
@@ -92,8 +95,8 @@
                             </a>
                         </article>
                     </div>
-                </div>
-                <div class="button-wrapper">
+                </div>*@
+                <div class="button-wrapper"  id="loadServices">
                     <a href="#" class="tiles-load-button">LOAD MORE <b>Business Optimization</b></a>
                 </div>
             </div>
