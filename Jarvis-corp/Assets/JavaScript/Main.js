@@ -10,6 +10,7 @@ $(document).ready(function () {
     $("#test .tab-pane").hide();
     $("#test .tab-pane:first").show();
 
+    $('#loadbox article').hide();
     $('#loadbox article:lt(4)').show();
     $('#loadMore').on("click", function () {
         $('#loadbox article').show();
@@ -21,6 +22,7 @@ function onLoad() {
     console.log("finally calleds")
 }
 function Test(clicked) {
+    console.log("test function called")
     var els = document.getElementsByClassName("tab-pane");
     var myFunc = function myFunction(item) {
         if (item.id == "comp-" + clicked) {
@@ -48,3 +50,24 @@ function OpenLeader(id) {
 function CloseLeader(id) {
     document.getElementById("Profile-Wrap-" + id).style.display = "none";
 }
+
+function communityPartner(partner) {
+    console.log("function called commmnjasafgjshvdhj")
+    console.log(partner);
+    var com = document.getElementsByClassName("partners-overlay");
+    console.log("hello boys:-   ", com.id);
+    var abc = function ABC(item) {
+        var akojfo = document.getElementById(item.id);
+       
+    }
+    Array.prototype.forEach.call(com, abc);
+}
+
+
+$(function () {
+    //$('.partners-overlay').hide();
+    $('.parter-link-click').on('click', function () {
+        console.log("on click")
+        $('.partners-overlay').slideToggle();
+    });
+});
