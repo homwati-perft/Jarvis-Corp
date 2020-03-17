@@ -1,0 +1,18 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    var industriesList = RenderingContext.Current.ContextItem.GetChildren();
+}
+
+<nav class="industries-subnav">
+    <div class="container">
+ 
+        @{
+            foreach (Sitecore.Data.Items.Item industries_list in industriesList)
+            {
+                <a><ul><li class="industries-circular-image">@Html.Sitecore().Field("Image", industries_list)</li><li>@Html.Sitecore().Field("Link Heading", industries_list)</li></ul></a>
+            }
+        }
+    </div>
+</nav>

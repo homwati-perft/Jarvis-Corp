@@ -8357,11 +8357,12 @@ footer {
       color: #cc1f20; }
       .industries-subnav a:hover span {
         border-color: #cc1f20; }
-    .industries-subnav a span {
+    .industries-subnav a li.industries-circular-image {
+        list-style:none;
       font-size: 2rem;
       border: 1px solid #3e3e3e;
       border-radius: 100%;
-      width: 5rem;
+     width: 5rem;
       height: 5rem;
       text-align: center;
       display: inline-block;
@@ -8369,6 +8370,13 @@ footer {
       position: absolute;
       top: 1rem;
       left: 0; }
+    .industries-subnav a li{
+        list-style:none;
+    }
+    .industries-subnav a li.industries-circular-image img {
+        max-width:50px;
+        max-height:50px;
+    }
     .industries-subnav a i {
       margin-top: .6em;
       line-height: 1; }
