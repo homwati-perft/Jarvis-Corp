@@ -1,0 +1,47 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<section class="cards-section white static expanded lower-eventpanels eventpanels" id="cards-section-webinars">
+    <div class="cards-container">
+        <div class="card-group">
+
+            <article class="card col-lg-3 col-md-4 col-sm-12">
+                @Html.Sitecore().DynamicPlaceholder("Webinar-Info-left")
+            </article>
+            <article class="card col-lg-3 col-md-4 col-sm-12">
+                @Html.Sitecore().DynamicPlaceholder("Webinar-Info-left-Middle")
+            </article>
+            <article class="card col-lg-3 col-md-4 col-sm-12">
+                @Html.Sitecore().DynamicPlaceholder("Webinar-Info-Right-Middle")
+            </article>
+            <article class="card col-lg-3 col-md-4 col-sm-12">
+                @Html.Sitecore().DynamicPlaceholder("Webinar-Info-Right")
+            </article>
+
+        </div>
+        @*<nav class="container pagination-wrapper silver">
+                <ul class="pagination">
+
+                    <li class="page-item active"><a class="page-link" href="https://www.perficient.com/insights/webinars?pg=1">1</a></li>
+                    <li class="page-item"><a class="page-link" href="https://www.perficient.com/insights/webinars?pg=2">2</a></li>
+                    <li class="page-item"><a class="page-link" href="https://www.perficient.com/insights/webinars?pg=3">3</a></li>
+                    <li class="page-item"><a class="page-link" href="https://www.perficient.com/insights/webinars?pg=4">4</a></li>
+                    <li class="page-item"><a class="page-link" href="https://www.perficient.com/insights/webinars?pg=5">5</a></li>
+                    <li class="page-item"><a class="page-link" href="https://www.perficient.com/insights/webinars?pg=6">6</a></li>
+                    <li class="page-item"><a class="page-link" href="https://www.perficient.com/insights/webinars?pg=7">7</a></li>
+                    <li class="page-item"><a class="page-link" href="https://www.perficient.com/insights/webinars?pg=8">8</a></li>
+
+                    <li class="page-item">
+                        <a class="page-link" href="https://www.perficient.com/insights/webinars?pg=2" aria-label="Next">
+                            <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>*@
+
+    </div>
+</section> 
