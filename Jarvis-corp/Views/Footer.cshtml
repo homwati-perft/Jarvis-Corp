@@ -4,8 +4,8 @@
 @model RenderingModel
 @{
     Sitecore.Data.Fields.MultilistField social_Media_List = Model.Item.Fields["Social Media List"];
-    Sitecore.Data.Fields.LinkField Privacy_Policy_Link = Model.Item.Fields["Privacy Policy Link"];
-    Sitecore.Data.Fields.LinkField Footer_Logo_Link = Model.Item.Fields["Footer Logo Link"];
+    //Sitecore.Data.Fields.LinkField Privacy_Policy_Link = Model.Item.Fields["Privacy Policy Link"];
+
 }
 
 <section class="footer-icons">
@@ -14,15 +14,22 @@
             <div class="col-sm-12">
                 <ul class="hidden-sm-down pull-left">
                     <li>
-                        <a href="@Footer_Logo_Link.Url">
+                        @{ 
+                            var logo_link = Sitecore.Context.Database.GetItem("{88A087A7-E262-4AB6-B8F5-99920F1CE1AC}");
+                            var Footer_Logo_Link = LinkManager.GetItemUrl(logo_link);
+                        }
+                        <a href="@Footer_Logo_Link">
                             @Html.Sitecore().Field("Company Logo")
                         </a>
                     </li>
                     <!-- BEGIN FOOTER NAVIGATION -->
 
                     <li>
-                      
-                        <a href='@Privacy_Policy_Link.Url'>@Html.Sitecore().Field("Privacy Policy Link Heading")</a>
+                        @{ 
+                            var privacy_policy_link = Sitecore.Context.Database.GetItem("{11F3757C-2509-4D50-815A-FD89E8D2C6F4}");
+                            var privacy_link = LinkManager.GetItemUrl(privacy_policy_link);
+                        }
+                        <a href='@privacy_link'>@Html.Sitecore().Field("Privacy Policy Link Heading")</a>
                     </li>
 
                     <!-- END FOOTER NAVIGATION -->
@@ -33,10 +40,14 @@
                 <!-- Begin Footer Icons-->
       
                 <ul class="list-unstyled">@{
+
                     foreach (Sitecore.Data.Items.Item social_Media in social_Media_List.GetItems())
                     {
+                        Sitecore.Data.Fields.LinkField link = social_Media.Fields["Social Media Link"];
+                        
                         <li>
-                            <a class="a2a_button_twitter">@Html.Sitecore().Field("Social Media Logo", social_Media, new { mw = 20, mh = 20 }))</a>
+
+                            <a class="a2a_button_twitter" href="@link.Url"> @Html.Sitecore().Field("Social Media Logo", social_Media, new { mw = 20, mh = 20 }))</a>
                         </li>
                     }
                 }</ul>
@@ -46,30 +57,24 @@
     </div>
 </section>
 <footer>
-    <div class="desktop-footer">
+    @*<div class="desktop-footer">
         <div class="footer-slogan">
             Vision. Execution. Value.
         </div>
         <div class="footer-links hidden-md-up">
             <ul>
-                <!-- BEGIN FOOTER NAVIGATION MOBILE -->
+ 
 
                 <li>
-                    <h4>@Privacy_Policy_Link.Url</h4>
-                    <a href='/privacy-policy'>@Html.Sitecore().Field("Privacy Policy Heading")</a>
+               
+                    <a href='@Privacy_Policy_Link.Url'>@Html.Sitecore().Field("Privacy Policy Heading")</a>
                 </li>
 
-                <!-- END FOOTER NAVIGATION MOBILE -->
+    
             </ul>
             <p>@Html.Sitecore().Field("Copyright")</p>
         </div>
-        @*<button class="pull-right hidden-sm-down" type="button" id="contact-trigger-overlay">Contact Us</button>
-        <div class="footer-share">
-            <button class="dropdown-toggle" id="sharethis" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Share This Page
-            </button>*@
-            <!-- BEGIN SOCIAL MEDIA LINKS -->
-            <!-- AddToAny BEGIN -->
+
             <div class="dropdown-menu sharelinks a2a_kit" aria-labelledby="sharethis">
                 <ul class="list-unstyled">
                     @{
@@ -83,9 +88,8 @@
                 </ul>
             </div>
             <script async src="https://static.addtoany.com/menu/page.js"></script>
-            <!-- AddToAny END -->
-            <!-- END SOCIAL MEDIA LINKS -->
-        </div>
-    </div>
+
+        </div>*@
+    
 
 </footer>

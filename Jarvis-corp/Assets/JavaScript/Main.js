@@ -10,29 +10,46 @@ $(document).ready(function () {
     $("#test .tab-pane").hide();
     $("#test .tab-pane:first").show();
 
+
     $('#loadbox article').hide();
+
+
+    $('#servicesLink article a').hide();
+    $('#servicesLink article a:lt(2)').show();
+    $('#loadServices').on("click", function () {
+        $('#servicesLink article a').show();
+        $(this).hide();
+    });
+
     $('#loadbox article:lt(4)').show();
     $('#loadMore').on("click", function () {
         $('#loadbox article').show();
         $(this).hide();
     });
-    
+
 });
 function onLoad() {
     console.log("finally calleds")
 }
+
 function Test(clicked) {
     console.log("test function called")
+}
+function Vision(clicked) {
+
     var els = document.getElementsByClassName("tab-pane");
+    
     var myFunc = function myFunction(item) {
         if (item.id == "comp-" + clicked) {
-            console.log("item.id>>>>", item.id)
+           
             document.getElementById(item.id).style.display = "block";
         } else {
+            
             document.getElementById(item.id).style.display = "none";
         }
     }
     Array.prototype.forEach.call(els, myFunc);
+    
 }
 
 
