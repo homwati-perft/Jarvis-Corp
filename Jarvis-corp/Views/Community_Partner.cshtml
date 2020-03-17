@@ -1,0 +1,78 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Sitecore.Data.Fields.MultilistField Community = Model.Item.Fields["Community Partners List"];
+
+}
+<section class="fifty overlay-list">
+    @{
+        var j = 0;
+    }
+    <!-- Overlays -->
+
+    <div class="fiftyrow">
+        <div class="fiftycolumn mobile-hide">
+            @Html.Sitecore().Field("Community background Image", new { @class = "fiftybg" })
+        </div>
+        <div class="fiftycolumn light-bg silver list">
+            <div class="fiftycontent">
+                <h1>@Html.Sitecore().Field("Community Heading")</h1>
+                <ul>
+                    @{
+                        int i = 0;
+                    }
+                    @foreach (Sitecore.Data.Items.Item partners in Community.GetItems())
+                    {
+                        <li>
+                            <a class="parter-link-click" id="@i" onclick="communityPartner(this.id)">
+                                @Html.Sitecore().Field("Partner Name", partners)
+                            </a>
+                            <div class="partners-overlay" id="part-@i">
+                                <div class="overlay-content">
+                                    <button class="close" onclick="Close(@i)">&times;</button>
+                                    @*<span class="close" onclick="close()">&times;</span>*@
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-4">
+
+                                                @Html.Sitecore().Field("Partner Pic", partners, new { @class = "fiftybg" })
+                                            </div>
+                                            <div class="col-md-8 col-sm-12">
+                                                <h3>@Html.Sitecore().Field("Partner Name", partners)</h3>
+                                                <p><p>@Html.Sitecore().Field("Partner Intro", partners)</p></p>
+                                                <p><a href='https://www.autismspeaks.org' target='_blank'>Learn More</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        i++;
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="partners-overlay" id="part-@j">
+            <div class="overlay-content">
+                <span class="close">&times;</span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src='/-/media/images/about/community-partners/community-partner-autism-speaks.jpg?h=203&amp;w=300&amp;la=en&amp;hash=8AC5AC3497AB5F59656B2E938F8FFEF52720010D' class='fiftybg' alt='' />
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <h3>Autism Speaks</h3>
+                            <p><p>Perficient is proud to work closely with Autism Speaks. We sponsor and participate in the annual Autism Speaks Walk to help raise money in support of the organization’s mission to fund research and advocate for individuals with autism and their families. </p></p>
+                            <p><a href='https://www.autismspeaks.org' target='_blank'>Learn More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+</section>

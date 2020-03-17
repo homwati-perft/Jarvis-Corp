@@ -1,0 +1,29 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<div class="row panels-row">
+    <div class="col-md-4 panel-wrapper">
+        <div class="card" style="height: 478px;">
+            <div class="event" style="height: 204px;">
+                <h4 class="event-title">
+                    <a href="">@Html.Sitecore().Field("Title")</a>
+                </h4>
+                <h5></h5>
+                <h6>
+                    @Html.Sitecore().Field("Date", new { format = "MMMM dd, yyyy" })
+                    <br>
+                    @Html.Sitecore().Field("Start Time", new { format = "hh:mm" })- @Html.Sitecore().Field("End Time", new { format = "hh:mm" }) CST
+                </h6>
+                <a href="" class="btn-event">@Html.Sitecore().Field("Button Title")</a>
+            </div>
+
+            @Html.Sitecore().DynamicPlaceholder("Mentors-Top")
+            @Html.Sitecore().DynamicPlaceholder("Mentors-Middle")
+            @Html.Sitecore().DynamicPlaceholder("Mentors-Bottom")
+
+        </div>
+    </div>
+</div>

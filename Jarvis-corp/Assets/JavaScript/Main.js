@@ -11,6 +11,9 @@ $(document).ready(function () {
     $("#test .tab-pane:first").show();
 
 
+    $('#loadbox article').hide();
+
+
     $('#servicesLink article a').hide();
     $('#servicesLink article a:lt(2)').show();
     $('#loadServices').on("click", function () {
@@ -28,7 +31,12 @@ $(document).ready(function () {
 function onLoad() {
     console.log("finally calleds")
 }
+
+function Test(clicked) {
+    console.log("test function called")
+}
 function Vision(clicked) {
+
     var els = document.getElementsByClassName("tab-pane");
     
     var myFunc = function myFunction(item) {
@@ -44,13 +52,6 @@ function Vision(clicked) {
     
 }
 
-//$(document).ready(function () {
-//    $('#loadbox article:lt(4)').show();
-//    $('#loadMore').on("click", function () {
-//        $('#loadbox article').show();
-//        $(this).hide();
-//    });
-//});
 
 function OpenLeader(id) {
     console.log("hhgjhhj>>>>>>>>>>>>", id);
@@ -59,3 +60,25 @@ function OpenLeader(id) {
 function CloseLeader(id) {
     document.getElementById("Profile-Wrap-" + id).style.display = "none";
 }
+
+function communityPartner(partner) {
+
+    var com = document.getElementsByClassName("partners-overlay");
+    var abc = function ABC(item) {
+        if (item.id == "part-" + partner) {
+            document.getElementById(item.id).style.display = "contents";
+        } else {
+            document.getElementById(item.id).style.display = "none";
+        }
+    }
+    
+    Array.prototype.forEach.call(com, abc);
+}
+
+
+function Close(id) {
+    console.log("vfdfdhsgfdhghfdjhfhdsgfh",id)
+    document.getElementById("part-"+id).style.display = "none";
+}
+
+
