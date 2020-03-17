@@ -2,7 +2,7 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-    Sitecore.Data.Fields.MultilistField our_values = Model.Item.Fields["Our Values List"];
+    Sitecore.Data.Fields.MultilistField our_values = Model.Item.Fields["List"];
 }
 <div>
     <section class="three-four-up" id="our-values">
@@ -14,7 +14,7 @@
             @foreach (Sitecore.Data.Items.Item our_values_list in our_values.GetItems())
             {
                 <article>
-                    <i>@Html.Sitecore().Field("Image", our_values_list)</i>
+                    <i>@Html.Sitecore().Field("Icon", our_values_list)</i>
                     <h2>@Html.Sitecore().Field("Value Title", our_values_list)</h2>
                     <p>@Html.Sitecore().Field("Small Description", our_values_list)</p>
                 </article>

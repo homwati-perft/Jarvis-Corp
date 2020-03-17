@@ -139,6 +139,11 @@
     <Content Include="Views\Leadership.cshtml" />
     <Content Include="Views\Community_Partner.cshtml" />
     <Content Include="Views\Our Values.cshtml" />
+    <Content Include="Views\Webinar\Mentors.cshtml" />
+    <Content Include="Views\Webinar\More Webinars.cshtml" />
+    <Content Include="Views\Webinar\Registration.cshtml" />
+    <Content Include="Views\Webinar\Webinar.cshtml" />
+    <Content Include="Views\Webinar\Webinar Info.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

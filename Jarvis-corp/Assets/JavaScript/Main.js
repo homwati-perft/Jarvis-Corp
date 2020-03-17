@@ -35,13 +35,6 @@ function Test(clicked) {
     Array.prototype.forEach.call(els, myFunc);
 }
 
-//$(document).ready(function () {
-//    $('#loadbox article:lt(4)').show();
-//    $('#loadMore').on("click", function () {
-//        $('#loadbox article').show();
-//        $(this).hide();
-//    });
-//});
 
 function OpenLeader(id) {
     console.log("hhgjhhj>>>>>>>>>>>>", id);
@@ -52,22 +45,23 @@ function CloseLeader(id) {
 }
 
 function communityPartner(partner) {
-    console.log("function called commmnjasafgjshvdhj")
-    console.log(partner);
+
     var com = document.getElementsByClassName("partners-overlay");
-    console.log("hello boys:-   ", com.id);
     var abc = function ABC(item) {
-        var akojfo = document.getElementById(item.id);
-       
+        if (item.id == "part-" + partner) {
+            document.getElementById(item.id).style.display = "contents";
+        } else {
+            document.getElementById(item.id).style.display = "none";
+        }
     }
+    
     Array.prototype.forEach.call(com, abc);
 }
 
 
-$(function () {
-    //$('.partners-overlay').hide();
-    $('.parter-link-click').on('click', function () {
-        console.log("on click")
-        $('.partners-overlay').slideToggle();
-    });
-});
+function Close(id) {
+    console.log("vfdfdhsgfdhghfdjhfhdsgfh",id)
+    document.getElementById("part-"+id).style.display = "none";
+}
+
+

@@ -25,12 +25,13 @@
                     @foreach (Sitecore.Data.Items.Item partners in Community.GetItems())
                     {
                         <li>
-                            <a class="parter-link-click">
+                            <a class="parter-link-click" id="@i" onclick="communityPartner(this.id)">
                                 @Html.Sitecore().Field("Partner Name", partners)
                             </a>
                             <div class="partners-overlay" id="part-@i">
                                 <div class="overlay-content">
-                                    <span class="close">&times;</span>
+                                    <button class="close" onclick="Close(@i)">&times;</button>
+                                    @*<span class="close" onclick="close()">&times;</span>*@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-4">
