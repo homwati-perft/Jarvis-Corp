@@ -148,6 +148,8 @@
 
     <Content Include="Views\ServicesLinksVertical.cshtml" />
 
+    <None Include="Views\Industries.cshtml" />
+
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
