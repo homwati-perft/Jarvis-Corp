@@ -137,7 +137,6 @@
     <Content Include="Views\Services.cshtml" />
     <Content Include="Views\servicesLinks.cshtml" />
     <Content Include="Views\Leadership.cshtml" />
-
     <Content Include="Views\Community_Partner.cshtml" />
     <Content Include="Views\Our Values.cshtml" />
     <Content Include="Views\Webinar\Mentors.cshtml" />
@@ -145,11 +144,9 @@
     <Content Include="Views\Webinar\Registration.cshtml" />
     <Content Include="Views\Webinar\Webinar.cshtml" />
     <Content Include="Views\Webinar\Webinar Info.cshtml" />
-
     <Content Include="Views\ServicesLinksVertical.cshtml" />
-
     <None Include="Views\Industries.cshtml" />
-
+    <Content Include="Views\Main.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
