@@ -2,14 +2,14 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-
+    Sitecore.Data.Fields.LinkField regi_link = Model.Item.Fields["Link"];
 }
 <div class="row panels-row">
     <div class="col-md-4 panel-wrapper">
         <div class="card" style="height: 478px;">
             <div class="event" style="height: 204px;">
                 <h4 class="event-title">
-                    <a href="">@Html.Sitecore().Field("Title")</a>
+                    <a href="">@Html.Sitecore().Field("Heading")</a>
                 </h4>
                 <h5></h5>
                 <h6>
@@ -17,7 +17,7 @@
                     <br>
                     @Html.Sitecore().Field("Start Time", new { format = "hh:mm" })- @Html.Sitecore().Field("End Time", new { format = "hh:mm" }) CST
                 </h6>
-                <a href="" class="btn-event">@Html.Sitecore().Field("Button Title")</a>
+                <a href="@regi_link.Url" class="btn-event">@Html.Sitecore().Field("Link Heading")</a>
             </div>
 
             @Html.Sitecore().DynamicPlaceholder("Mentors-Top")

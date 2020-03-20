@@ -2,9 +2,11 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
+    Sitecore.Data.Fields.LinkField services_link = Model.Item.Fields["Link"];
 
 }
-<a href="/work/linkedin">
+}
+<a href="@services_link.Url">
     <div class="tile-block tile-img">
         @Html.Sitecore().Field("Service Image", new { @class= "img-responsive" })
     </div>

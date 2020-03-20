@@ -2,30 +2,19 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-
+    Sitecore.Data.Fields.LinkField banner_link = Model.Item.Fields["Link"];
 }
 <section class="hero hero-block solid" id="hero-main" style="">
-    <div class="hero-slide-menu">
-        <div class="hero-slide-slant"></div>
-        <button class="btn-hero-menu"><span class="slide-btn-open">&gt;</span><span class="slide-btn-close">×</span></button>
-        <ul class="nav slide-nav">
-            <li data-slideid="0"><a href="#">Perficient Acquires MedTouch</a></li>
-            <li data-slideid="1"><a href="#">Digital Marketing Conference</a></li>
-            <li data-slideid="2"><a href="#">VITAS gets a 2000% Increase in Site Traffic </a></li>
-            <li data-slideid="3"><a href="#">The Executive's Guide to Intelligent Automation </a></li>
-            <li data-slideid="4"><a href="#">Vlocity Improves Case Deflection by 50% Month Over Month</a></li>
-        </ul>
-    </div>
+   
     <div class="hero-background-container">
-        @Html.Sitecore().Field("Image")
+        @Html.Sitecore().Field("Banner Image")
         <div class="hero-caption"><a href="#"></a></div>
     </div>
     <div class="color-container" style="background: no-repeat right bottom/85%;">
-        @*<i class="icon icon-blockangle" style="color: #9e8b6a"></i>*@
         <div class="hero-content">
-            <h1 style="color:black">@Html.Sitecore().Field("Title")</h1>
-            <p style="color:black">@Html.Sitecore().Field("Introduction")</p>
-            <a href="" class="btn-hero" style="background:black ">@Html.Sitecore().Field("Link Heading")</a>
+            <h1 style="color:black">@Html.Sitecore().Field("Heading")</h1>
+            <p style="color:black">@Html.Sitecore().Field("Intro")</p>
+            <a href="@banner_link.Url" class="btn-hero" style="background:black ">@Html.Sitecore().Field("Link Heading")</a>
         </div>
     </div>
 </section>

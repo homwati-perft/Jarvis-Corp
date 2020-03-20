@@ -8,94 +8,13 @@
     <div class="container tiles-wrapper" id="b6ac036e-3252-402c-a105-95bd6cc42b61">
         <div class="row">
             <div class="col-md-4 tiles-heading">
-                <h1>@Html.Sitecore().Field("Service Heading")</h1>
-                <p>@Html.Sitecore().Field("Service Intro")</p>
+                <h1>@Html.Sitecore().Field("Heading")</h1>
+                <p>@Html.Sitecore().Field("Intro")</p>
             </div>
             <div class="col-md-8">
                 <div class="tiles-row">
-                    <div class="tile-flex" id="servicesLink">
-                        <article class="tile">
-                            @Html.Sitecore().DynamicPlaceholder("Services Links")
-                        </article>
-                        @*<article class="tile">
-                            @Html.Sitecore().DynamicPlaceholder("Services Links Vertical")
-                        </article>*@
-                        @*<article class="tile">
-                            <a href="/work/gopro">
-                                <div class="tile-block tile-img">
-                                    <img src='/-/media/images/work/tile-images/client-link-go-pro.jpg?h=204&amp;w=276&amp;la=en&amp;hash=29634446D90653FA4EC114E2F21FE28F747E3C68' class='img-responsive' alt='' />
-                                </div>
-                                <div class="tile-block tile-content ">
-                                    <figcaption>Operations</figcaption>
-                                    <div class="tile-content-wrap">
-
-                                        <h2 class="tile-title">GoPro Provides Killer Customer Service with Salesforce</h2>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="tile">
-                            <a href="/work/palo-alto-networks">
-                                <div class="tile-block tile-img">
-                                    <img src='/-/media/images/work/tile-images/work-tile-paloaltonetworks.jpg?h=204&amp;w=276&amp;la=en&amp;hash=D94ED4340DA9BAB8BE00B8D3EFCDF64BD748D83E' class='img-responsive' alt='' />
-                                </div>
-                                <div class="tile-block tile-content ">
-                                    <figcaption>Technology</figcaption>
-                                    <div class="tile-content-wrap">
-
-                                        <h2 class="tile-title">Palo Alto’s New Integration within Service Cloud Saves Support Team 3,000 Minutes Per Day</h2>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>*@
-                    </div>
+                  @Html.Sitecore().Placeholder("Services Main Right")
                 </div>
-                @*<div class="tiles-row hidden">
-                    <div class="tile-flex">
-                        <article class="tile">
-                            <a href="/work/analytical-graphics-inc">
-                                <div class="tile-block tile-img">
-                                    <img src='/-/media/images/work/tile-images/client-link-agi.jpg?h=204&amp;w=276&amp;la=en&amp;hash=0B4F43BD11A37CFA72D008D7462040EC9C924BB8' class='img-responsive' alt='' />
-                                </div>
-                                <div class="tile-block tile-content ">
-                                    <figcaption>Operations</figcaption>
-                                    <div class="tile-content-wrap">
-
-                                        <h2 class="tile-title">AGI Accesses Mission-Critical Information in the Cloud</h2>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="tile">
-                            <a href="/work/sunovion">
-                                <div class="tile-block tile-img">
-                                    <img src='/-/media/images/work/tile-images/work-tile-sunovian.jpg?h=204&amp;w=276&amp;la=en&amp;hash=3DB0091CAF7757C33768416F97C8C2A1F39F4193' class='img-responsive' alt='' />
-                                </div>
-                                <div class="tile-block tile-content ">
-                                    <figcaption>Data</figcaption>
-                                    <div class="tile-content-wrap">
-
-                                        <h2 class="tile-title">Sunovion Breathes New Life into Clinical Operations with a CTMS</h2>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="tile">
-                            <a href="/work/kci">
-                                <div class="tile-block tile-img">
-                                    <img src='/-/media/images/work/tile-images/client-link-kci.jpg?h=204&amp;w=276&amp;la=en&amp;hash=306088D44A5A461041674F37CD655650B20E0342' class='img-responsive' alt='' />
-                                </div>
-                                <div class="tile-block tile-content ">
-                                    <figcaption>Operations</figcaption>
-                                    <div class="tile-content-wrap">
-
-                                        <h2 class="tile-title">KCI Regenerates Clinical and Safety Processes</h2>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                </div>*@
                 <div class="button-wrapper"  id="loadServices">
                     <a href="#" class="tiles-load-button">LOAD MORE <b>Business Optimization</b></a>
                 </div>

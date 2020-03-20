@@ -11,16 +11,16 @@ $(document).ready(function () {
     $("#test .tab-pane:first").show();
 
 
-    $('#loadbox article').hide();
+    
 
 
-    $('#servicesLink article a').hide();
-    $('#servicesLink article a:lt(2)').show();
+    $('#servicesLink').hide();
+    $('#servicesLink:lt(0)').show();
     $('#loadServices').on("click", function () {
-        $('#servicesLink article a').show();
+        $('#servicesLink').show();
         $(this).hide();
     });
-
+    $('#loadbox article').hide();
     $('#loadbox article:lt(4)').show();
     $('#loadMore').on("click", function () {
         $('#loadbox article').show();

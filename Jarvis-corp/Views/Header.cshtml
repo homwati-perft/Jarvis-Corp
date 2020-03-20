@@ -21,16 +21,7 @@
     <div class="container-fluid">
         <div class="row">
 
-            @*<div class="hidden-md-up mobile-logo">
-                    <a href="/">
-                        <img src='/-/media/images/header/2015_logo_horiz_notag_png.png?h=48&amp;w=200&amp;la=en&amp;hash=027BD06CD8DDB198562D578D8CAC620DA3E1A626' alt='Perficient Logo' />
-                    </a>
-                </div>
-                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#mobilenav">
-                    <div class="menu-icon">
-                        <div class="center-bar"></div>
-                    </div>
-                </button>*@
+           
 
             <nav class="navbar navbar-full">
                 <div class="collapse navbar-toggleable-sm" id="mobilenav">
@@ -58,7 +49,7 @@
                                    
                                     <li class="nav-item ">
                                         <a href="@linkUrl" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            @Html.Sitecore().Field("Title",nav)
+                                            @Html.Sitecore().Field("Heading",nav)
                                         </a>
 
 
@@ -75,16 +66,7 @@
                                                    {
                                                     <li class="mega-menu-item"><a href="">@Html.Sitecore().Field("Link Heading",link)</a></li>
                                                    }
-                                                    @*<li class="mega-menu-item"><a href="/services/data">Data</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/design">Design</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/marketing">Marketing</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/operations">Operations</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/strategy">Strategy</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/technology">Technology</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/digital">Perficient Digital</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/cloud">Cloud</a></li>
-                                                    <li class="mega-menu-item"><a href="/services/optimized-global-delivery">Optimized Global Delivery</a></li>*@
-                                                </ul>
+                                                  </ul>
                                             </div>
                                         </div>
                                     </li>
@@ -107,7 +89,7 @@
                                 {
                                     var linkUrl = LinkManager.GetItemUrl(site);
                                     <li>
-                                        <a href="@linkUrl">@Html.Sitecore().Field("Title", site)</a>
+                                        <a href="@linkUrl">@Html.Sitecore().Field("Heading", site)</a>
                                     </li>
                                 }
                                 

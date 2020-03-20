@@ -2,7 +2,7 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-
+    Sitecore.Data.Fields.LinkField regi_link = Model.Item.Fields["Link"];
 }
 
     <div class="card-content">
@@ -15,13 +15,13 @@
                 <div class="event-column event-details" style="height: 152px;">
                     <div class="event">
                         <h4 class="event-title">
-                            <a href="">@Html.Sitecore().Field("Title") </a>
+                            <a href="">@Html.Sitecore().Field("Heading") </a>
                         </h4>
                         <h5></h5>
                         <h6>
                             @Html.Sitecore().Field("Date", new { format = "MMMM dd, yyyy" })
                         </h6>
-                        <a href="" class="btn-event">@Html.Sitecore().Field("Button Title")</a>
+                        <a href="@regi_link.Url" class="btn-event">@Html.Sitecore().Field("Link Heading")</a>
                     </div>
                 </div>
                 <div class="event-column event-host" style="height: 362px;">

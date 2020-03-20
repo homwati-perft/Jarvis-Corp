@@ -1,0 +1,17 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<div class="tile-flex" id="servicesLink">
+    <article class="tile">
+        @Html.Sitecore().DynamicPlaceholder("Services Left Top")
+    </article>
+    <article class="tile">
+        @Html.Sitecore().DynamicPlaceholder("Services Left Bottom")
+    </article>
+    <article class="tile">
+        @Html.Sitecore().DynamicPlaceholder("Services Right Top")
+    </article>
+</div>

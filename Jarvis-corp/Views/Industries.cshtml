@@ -2,16 +2,20 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-    var industriesList = RenderingContext.Current.ContextItem.GetChildren();
+    //var industriesList = RenderingContext.Current.ContextItem.GetChildren();
+    Sitecore.Data.Items.Item industries = Sitecore.Context.Database.GetItem("{4E9AB718-F5D9-4B04-9CE1-DF00841E4800}");
+    var industriesList = industries.GetChildren();
 }
 
 <nav class="industries-subnav">
     <div class="container">
- 
+   
         @{
+
             foreach (Sitecore.Data.Items.Item industries_list in industriesList)
             {
-                <a><ul><li class="industries-circular-image">@Html.Sitecore().Field("Image", industries_list)</li><li>@Html.Sitecore().Field("Link Heading", industries_list)</li></ul></a>
+                Sitecore.Data.Fields.LinkField industry_link = industries_list.Fields["Link"];
+                <a href="@industry_link.Url"><ul><li class="industries-circular-image" >@Html.Sitecore().Field("Industry Image", industries_list)</li><li> @Html.Sitecore().Field("Link Heading", industries_list)</li></ul></a>
             }
         }
     </div>

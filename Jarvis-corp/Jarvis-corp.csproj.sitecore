@@ -9,4 +9,7 @@
   <File Include="/Views/Shared/Jarvis_Corp.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{E37AB61B-3F08-4AC5-8970-39F611CF0382}</Item>
   </File>
+  <File Include="Views\Services Main Right.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{E28D5110-95A8-4BC9-81E0-338EBF7E56D8}</Item>
+  </File>
 </Project>

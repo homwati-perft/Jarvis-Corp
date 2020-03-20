@@ -17,13 +17,14 @@
         </div>
         <div class="fiftycolumn light-bg silver list">
             <div class="fiftycontent">
-                <h1>@Html.Sitecore().Field("Community Heading")</h1>
+                <h1>@Html.Sitecore().Field("Heading")</h1>
                 <ul>
                     @{
                         int i = 0;
                     }
                     @foreach (Sitecore.Data.Items.Item partners in Community.GetItems())
                     {
+                        Sitecore.Data.Fields.LinkField partner_link = partners.Fields["Link"];
                         <li>
                             <a class="parter-link-click" id="@i" onclick="communityPartner(this.id)">
                                 @Html.Sitecore().Field("Partner Name", partners)
@@ -41,7 +42,7 @@
                                             <div class="col-md-8 col-sm-12">
                                                 <h3>@Html.Sitecore().Field("Partner Name", partners)</h3>
                                                 <p><p>@Html.Sitecore().Field("Partner Intro", partners)</p></p>
-                                                <p><a href='https://www.autismspeaks.org' target='_blank'>Learn More</a></p>
+                                                <p><a href='@partner_link.Url' target='_blank'>@Html.Sitecore().Field("Link Heading", partners)</a></p>
                                             </div>
                                         </div>
                                     </div>
