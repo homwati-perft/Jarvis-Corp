@@ -1,0 +1,13 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Sitecore.Data.Fields.LinkField guide_link = Model.Item.Fields["Link"];
+}
+<a href='@guide_link.Url' target='_blank'>
+        @Html.Sitecore().Field("Guide Background")  
+         <div class="grid-content">
+        <h4>@Html.Sitecore().Field("Guide Heading")</h4>
+        <p>@Html.Sitecore().Field("Link Heading")</p>
+    </div>
+</a>
