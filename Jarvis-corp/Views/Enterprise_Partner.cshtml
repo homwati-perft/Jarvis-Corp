@@ -1,0 +1,47 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Sitecore.Collections.ChildList strategic_partner = Model.Item.GetChildren();
+}
+<section class="cta-boxes" id="partners-boxes">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 section-header box-section-header">
+                <h2>@Html.Sitecore().Field("Heading")</h2>
+                <aside>
+                    @Html.Sitecore().Field("Intro")
+                </aside>
+            </div>
+        </div>
+        <div class="row box-wrapper">
+            @foreach (Sitecore.Data.Items.Item partner in strategic_partner)
+            {
+                Sitecore.Data.Fields.LinkField partner_link = partner.Fields["Link"];
+
+                <div class="box-container col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="box-partner box-ibm">
+                        <a href='@partner_link.Url'>  
+                            @Html.Sitecore().Field("Background", partner, new { @class = "box-background img-responsive" })
+                            <div class="box-overlay-container box-overlay-standard">
+                                <div class="box-logo-container">
+                                    @Html.Sitecore().Field("Partner Logo", partner, new { @class = "box-logo img-responsive" })
+                                </div>
+                            </div>
+                            <div class="box-overlay-container box-overlay-hover">
+                                <img src='/-/media/images/logo-perficient.png?h=55&amp;w=55&amp;la=en&amp;hash=F4939E27DC6A43F21104F94D6624E2E451A916A8' class='box-prft-logo img-responsive' alt='' />
+                                <h5><b>ENTERPRISE</b> PARTNER</h5>
+                                <p style="color:white"><p>@Html.Sitecore().Field("Intro",partner)</p></p>
+                                <div class="button-wrapper">
+                                    <div class="btn-box">@Html.Sitecore().Field("Link Heading", partner)</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>
