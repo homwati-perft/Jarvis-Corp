@@ -1,0 +1,31 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+Sitecore.Collections.ChildList children = Model.Item.GetChildren();
+}
+<section class="cta-squares" id="partners-squares">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 section-header">
+                <h2>@Html.Sitecore().Field("Heading")</h2>
+                <aside>
+                    @Html.Sitecore().Field("Intro")
+                </aside>
+            </div>
+        </div>
+        <div class="row square-wrapper">
+            @{
+                foreach (Sitecore.Data.Items.Item strategic_partners in children)
+                {
+                    Sitecore.Data.Fields.LinkField partner_link = strategic_partners.Fields["Partner Link"];
+                    <div class="square-container col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <a href='@partner_link.Url' class='square'>@Html.Sitecore().Field("Strategic Partner Logo", strategic_partners, new { @class= "square-logo" })</a>
+                    </div>
+                }
+
+            }
+         
+        </div>
+    </div>
+</section>
