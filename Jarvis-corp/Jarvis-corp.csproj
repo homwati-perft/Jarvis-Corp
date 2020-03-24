@@ -146,6 +146,9 @@
     <Content Include="Views\Webinar\Webinar Info.cshtml" />
     <Content Include="Views\Guide.cshtml" />
     <Content Include="Views\Guide_Part.cshtml" />
+    <Content Include="Views\Events.cshtml" />
+    <Content Include="Views\EventRow.cshtml" />
+    <Content Include="Views\EventList.cshtml" />
     <None Include="Views\Industries.cshtml" />
     <Content Include="Views\Main.cshtml" />
     <Content Include="Views\Services Main Right.cshtml" />

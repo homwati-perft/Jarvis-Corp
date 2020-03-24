@@ -1,0 +1,26 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<a href='https://www.oracle.com/modern-business-experience/' target='_blank'>
+    <div class="card-content">
+        <figure>
+            @Html.Sitecore().Field("Image", new { @class = "img-responsive hidden-xs" })
+        </figure>
+        <div class="card-block">
+            <h4 class="card-title">@Html.Sitecore().Field("Link Heading")</h4>
+
+            <p class="card-timestamp">
+              @Html.Sitecore().Field("Event Start Date", new { @format = "MMM dd" })  - @Html.Sitecore().Field("Event End Date", new { @format = "dd, yyyy" })
+                <br />
+            </p>
+            <p class="card-location">
+               @Html.Sitecore().Field("Event Venue")
+            </p>
+        </div>
+    </div>
+</a>
+
+@*March 23 - 26, 2020*@
