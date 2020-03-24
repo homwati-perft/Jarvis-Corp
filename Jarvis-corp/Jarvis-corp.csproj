@@ -152,6 +152,7 @@
     <None Include="Views\Industries.cshtml" />
     <Content Include="Views\Main.cshtml" />
     <Content Include="Views\Services Main Right.cshtml" />
+    <Content Include="Views\Enterprise_Partner.cshtml" />
     <Content Include="Views\Strategic Partner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
