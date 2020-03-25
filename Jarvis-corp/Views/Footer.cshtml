@@ -29,8 +29,9 @@
                             Sitecore.Data.Fields.LinkField privacy_policy = Model.Item.Fields["Link"];
                             //var privacy_policy_link = Sitecore.Context.Database.GetItem("{11F3757C-2509-4D50-815A-FD89E8D2C6F4}");
                             //var privacy_link = LinkManager.GetItemUrl(privacy_policy_link);
+                            var privacy = LinkManager.GetItemUrl(privacy_policy.TargetItem);
                         }
-                        <a href='@privacy_policy.Url'>@Html.Sitecore().Field("Link Heading")</a>
+                        <a href='@privacy'>@Html.Sitecore().Field("Link Heading")</a>
                     </li>
 
                     <!-- END FOOTER NAVIGATION -->

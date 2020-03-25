@@ -122,6 +122,9 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Shared\Jarvis_Corp.cshtml" />
+    <None Include="App_Config\Include\Investor\Investor.site.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\PublishProfiles\Jarvis_Corp.pubxml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -154,6 +157,12 @@
     <Content Include="Views\Services Main Right.cshtml" />
     <Content Include="Views\Enterprise_Partner.cshtml" />
     <Content Include="Views\Strategic Partner.cshtml" />
+    <Content Include="Views\Shared\Investor.cshtml" />
+    <Content Include="Views\One-Column.cshtml" />
+    <Content Include="Views\Three-Column.cshtml" />
+    <Content Include="Views\Investor\Investor-Left.cshtml" />
+    <Content Include="Views\Investor\Investor-Right.cshtml" />
+    <Content Include="Views\Investor\Investor-Middle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

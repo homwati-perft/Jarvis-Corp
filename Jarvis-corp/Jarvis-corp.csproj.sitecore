@@ -15,4 +15,8 @@
   <File Include="Views\Enterprise_Partner.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{2976D9AD-E824-4277-A809-C003EFD9CB38}</Item>
   </File>
+  <File Include="Views\Shared\Investor.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
+  <File Include="/Views/Shared/Investor.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{6FA82A1B-8EF3-4352-92C3-59A55333B17F}</Item>
+  </File>
 </Project>

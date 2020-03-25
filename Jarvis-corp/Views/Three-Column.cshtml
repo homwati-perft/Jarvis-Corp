@@ -1,0 +1,28 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<div class="clearfix ir-content" id="main">
+    <div class="container">
+        <div class="row">
+            <aside class="col-md-3 col-sm-12" id="left-menu">
+               
+                @Html.Sitecore().Placeholder("Investor-Left")
+
+            </aside>
+
+            <section class="col-md-9 col-sm-12" class="contain-main">
+                <div class="content-area ccbnContent">
+                    <div class="region region-content">
+                        <div id="block-nir-pid167-content" class="block--system-main-block block--system-main-block--5806 block--content--system-main-block block--content--system-main-block--5806 block--13adc65d-d840-4ace-a5c8-819109616815 block--13adc65d-d840-4ace-a5c8-819109616815--5806 block block-system block-system-main-block">
+                           @Html.Sitecore().Placeholder("Investor-Middle")
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>

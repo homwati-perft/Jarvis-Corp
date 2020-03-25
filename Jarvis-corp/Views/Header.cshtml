@@ -87,9 +87,19 @@
                             <ul>
                                 @foreach (Sitecore.Data.Items.Item site in SiteLinks.GetItems())
                                 {
-                                    var linkUrl = LinkManager.GetItemUrl(site);
+                                    var linkUrl = "";
+                                    Sitecore.Data.Fields.LinkField site_l= site.Fields["Link"];
+                                    if(site_l.LinkType == "internal")
+                                    {
+                                        linkUrl = LinkManager.GetItemUrl(site_l.TargetItem);
+                                    }
+                                    else
+                                    {
+                                        linkUrl = site_l.Url;
+                                    }
+
                                     <li>
-                                        <a href="@linkUrl">@Html.Sitecore().Field("Heading", site)</a>
+                                        <a href="@linkUrl">@Html.Sitecore().Field("Link Heading", site)</a>
                                     </li>
                                 }
                                 
