@@ -58,13 +58,14 @@
                                                 <a href="" style="width:100px;max-width:200px;">@Html.Sitecore().Field("Title",nav)</a>
                                             </div>
                                             @{ 
-                                                Sitecore.Data.Fields.MultilistField sublinks = nav.Fields["sub list"];
+                                                Sitecore.Collections.ChildList sub = nav.GetChildren();
                                             }
                                             <div class="menu-block">
                                                 <ul class="list-unstyled">
-                                                   @foreach (Sitecore.Data.Items.Item link in sublinks.GetItems())
+                                                   @foreach (Sitecore.Data.Items.Item link in sub)
                                                    {
-                                                    <li class="mega-menu-item"><a href="">@Html.Sitecore().Field("Link Heading",link)</a></li>
+                                                       var sublinkhref = LinkManager.GetItemUrl(link);
+                                                    <li class="mega-menu-item"><a href="@sublinkhref">@Html.Sitecore().Field("Heading",link)</a></li>
                                                    }
                                                   </ul>
                                             </div>

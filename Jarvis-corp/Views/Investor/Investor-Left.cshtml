@@ -2,65 +2,20 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-
+    Sitecore.Collections.ChildList left_invest = Model.Item.GetChildren();
 }
 <div class="region region-sidebar-first">
 
 
     <nav role="navigation" aria-labelledby="block-nir-pid167-investorrelations-menu" id="block-nir-pid167-investorrelations" class="block--system-menu-blockir block--system-menu-blockir--5806 block--sidebar-first--system-menu-block--ir block--sidebar-first--system-menu-block--ir--5806 block--5fa0b3bc-6bc5-4d21-ad7e-1dbc03bcaca2 block--5fa0b3bc-6bc5-4d21-ad7e-1dbc03bcaca2--5806 block block-menu navigation block-system-menublock menu--ir">
-
-        <h2 class="visually-hidden" id="block-nir-pid167-investorrelations-menu">Investor Relations</h2>
-
-
         <ul data-block-uuid="5fa0b3bc-6bc5-4d21-ad7e-1dbc03bcaca2" class="menu side-menu">
-            <li class="side-menu__item">
-                <a href="/financial-information/analyst-coverage" data-drupal-link-system-path="node/5896">Analyst Coverage</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="http://www.perficient.com/Investor-Relations/Board-Of-Directors">Board of Directors</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="http://www.perficient.com/Investor-Relations/Code-Of-Ethics">Code of Ethics</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="http://www.perficient.com/Investor-Relations/Committee-Charters">Committee Charters</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/corporate-governance-policies" data-drupal-link-system-path="node/5836">Corporate Governance Policies</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/contacts" data-drupal-link-system-path="node/12501">Contacts</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/email-alerts" data-drupal-link-system-path="node/5946">Email Alerts</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/estimates" data-drupal-link-system-path="node/5891">Estimates</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/financial-information" data-drupal-link-system-path="node/5871">Financial Reports</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/financial-information/fundamentals/ratios" data-drupal-link-system-path="node/5906">Fundamentals</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/investor-faq" data-drupal-link-system-path="node/5941">Investor FAQ</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="http://www.perficient.com/about">Leadership</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="http://www.perficient.com/About/News-Releases">News Releases</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/event-calendar" target="" rel="" data-drupal-link-system-path="node/5826">Event Calendar</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/sec-filings" data-drupal-link-system-path="node/6016">SEC Filings</a>
-            </li>
-            <li class="side-menu__item">
-                <a href="/stock-information" data-drupal-link-system-path="node/5916">Stock Information</a>
-            </li>
+            @foreach (Sitecore.Data.Items.Item invest in left_invest)
+            {
+                Sitecore.Data.Fields.LinkField nav_left_link = invest.Fields["Link"];
+                <li class="side-menu__item">
+                    <a href="@nav_left_link.Url">@Html.Sitecore().Field("Link Heading", invest)</a>
+                </li>
+            }
         </ul>
 
 

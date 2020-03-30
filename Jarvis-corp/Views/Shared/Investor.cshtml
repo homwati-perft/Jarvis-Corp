@@ -8,11 +8,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+  <title>@Html.Sitecore().Field("Meta Title", new { DisableWebEdit = true })</title>
   @Html.Sitecore().VisitorIdentification()
+    
+    <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,800" />
+    <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
+    @*<link rel="stylesheet" href="~/Assets/Css/Investor/css_99v8ymF_mpzobuOf89FVg3FKhcjKqiwyFOXYVCVBOFg.css" />*@
+    @*<link rel="stylesheet" href="~/Assets/Css/Investor/css_hkWYOslD08VYNHMcIVl7oLWXjj7DWzm6frq98NSvwMo.css" />*@
+    <link rel="stylesheet" href="~/Assets/Css/Investor/css_zK7S-PL4XJAbrc9zNYoCXYN9M67wDcLhNOCbFHKnn48.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script type="text/javascript" src="~/Assets/JavaScript/Main.js"></script>
 </head>
   <body>
-
+      
       @Html.Sitecore().Placeholder("Header")
 
      @Html.Sitecore().Placeholder("Main")

@@ -105,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Css\Bootstrap\bootstrap.css" />
+    <Content Include="Assets\Css\Investor\css_99v8ymF_mpzobuOf89FVg3FKhcjKqiwyFOXYVCVBOFg.css" />
+    <Content Include="Assets\Css\Investor\css_hkWYOslD08VYNHMcIVl7oLWXjj7DWzm6frq98NSvwMo.css" />
+    <Content Include="Assets\Css\Investor\css_zK7S-PL4XJAbrc9zNYoCXYN9M67wDcLhNOCbFHKnn48.css" />
     <Content Include="Assets\Css\perficient-main.css" />
     <Content Include="Assets\Css\perficient-override.css" />
     <Content Include="Assets\Images\card-home-page-digital-transformation.jpg" />
@@ -163,6 +166,7 @@
     <Content Include="Views\Investor\Investor-Left.cshtml" />
     <Content Include="Views\Investor\Investor-Right.cshtml" />
     <Content Include="Views\Investor\Investor-Middle.cshtml" />
+    <Content Include="Views\Investor\Contact-Info.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

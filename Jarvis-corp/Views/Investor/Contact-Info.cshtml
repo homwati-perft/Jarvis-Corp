@@ -1,0 +1,63 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Sitecore.Collections.ChildList contact_child = Model.Item.GetChildren();
+}
+<div class="row">
+    <div class="col-md-12 radix-layouts-footer panel-panel">
+        <div class="panel-panel-inner">
+            <div class="block-region-footer">
+                <div class="block-content--nir-global-block block-content--nir-global-block--12486 block--block-content6b06eea2-b298-4ad7-b441-54b63a13587c block--block-content6b06eea2-b298-4ad7-b441-54b63a13587c--5806 block--footer--block-content--6b06eea2-b298-4ad7-b441-54b63a13587c block--footer--block-content--6b06eea2-b298-4ad7-b441-54b63a13587c--5806 block--30a0e09d-1a4c-4a08-bb64-da573f784a04 block--30a0e09d-1a4c-4a08-bb64-da573f784a04--5806 block block-block-content block-block-content6b06eea2-b298-4ad7-b441-54b63a13587c">
+
+                    <h2>@Html.Sitecore().Field("Heading")</h2>
+
+
+                    <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">
+                        <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item">
+                            <div class="ccbnResponsiveRow">
+
+                                @foreach (Sitecore.Data.Items.Item contact in contact_child)
+                                {
+                                    <div class="ccbnResponsiveCell ccbnResponsive25">
+                                        <table border="0" cellpadding="3" cellspacing="1" width="100%">
+                                            <tbody>
+                                                <tr class="ccbnBgTtl">
+                                                    <td><span class="ccbnSubTtl">@Html.Sitecore().Field("Heading", contact)</span></td>
+                                                </tr>
+                                                <tr class="ccbnBgTxt">
+                                                    <td valign="top"><span class="ccbnTxt">@Html.Sitecore().Field("Address", contact)</span>
+                                                    <br/><span class="ccbnLabel">Phone: </span><span class="ccbnTxt">@Html.Sitecore().Field("Phone Number", contact)</span><br />
+                                                    @if (contact.Fields["Fax"] == null)
+                                                    {
+                                                       
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="ccbnLabel">Fax: </span><span class="ccbnTxt">@Html.Sitecore().Field("Fax", contact)</span>
+                                                    }
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="block--attribution-block__stock-info-attribution__thomson-reuters block--attribution-block__stock-info-attribution__thomson-reuters--5806 block--footer--attribution-block__stock-info-attribution__thomson-reuters block--footer--attribution-block__stock-info-attribution__thomson-reuters--5806 block--2f58128a-1a49-4441-8f00-f948675b17d4 block--2f58128a-1a49-4441-8f00-f948675b17d4--5806 block block-nir-attribution-block block-attribution-block__stock-info-attribution__thomson-reuters">
+
+
+                    <p>
+                        @Html.Sitecore().Field("Contact Copyright")
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
