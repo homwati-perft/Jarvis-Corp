@@ -1,6 +1,7 @@
 ﻿@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
+@using Sitecore.Links
 @{
     Sitecore.Collections.ChildList left_invest = Model.Item.GetChildren();
 }
@@ -11,11 +12,31 @@
         <ul data-block-uuid="5fa0b3bc-6bc5-4d21-ad7e-1dbc03bcaca2" class="menu side-menu">
             @foreach (Sitecore.Data.Items.Item invest in left_invest)
             {
+                var linkUrl = "";
+                Sitecore.Data.Fields.LinkField nav_left_link = invest.Fields["Link"];
+                if (nav_left_link.LinkType == "internal")
+                {
+
+                    linkUrl = LinkManager.GetItemUrl(nav_left_link.TargetItem);
+
+                }
+                else
+                {
+                    linkUrl = nav_left_link.Url;
+                }
+
+                <li class="side-menu__item">
+                    <a href="@linkUrl">@Html.Sitecore().Field("Link Heading", invest)</a>
+                </li>
+            }
+
+
+            @*{
                 Sitecore.Data.Fields.LinkField nav_left_link = invest.Fields["Link"];
                 <li class="side-menu__item">
                     <a href="@nav_left_link.Url">@Html.Sitecore().Field("Link Heading", invest)</a>
                 </li>
-            }
+            }*@
         </ul>
 
 
