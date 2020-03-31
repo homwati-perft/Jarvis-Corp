@@ -70,7 +70,8 @@
                             <ul>
                                 @foreach (Sitecore.Data.Items.Item all_pdf in pdf_list)
                                 {
-                                    Sitecore.Data.Fields.LinkField link = all_pdf.Fields["Link"];
+                                    Sitecore.Data.Fields.FileField link = all_pdf.Fields["PDF"];
+                                    string file_url = Sitecore.Resources.Media.MediaManager.GetMediaUrl(link.MediaItem);
                                     <li>
                                         <article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
                                             <div>
@@ -78,9 +79,11 @@
                                                     <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
                                                         <div class="field__item">
                                                             <div class="file-link">
-                                                                <span class="file file--mime-application-pdf file--application-pdf"> <a href="@link.Url" style="display: inline-flex;">
-                                                                    <span>@Html.Sitecore().Field("PDF Logo",all_pdf)</span>
-                                                                    @Html.Sitecore().Field("Link Heading", all_pdf)</a></span>
+                                                                <span class="file file--mime-application-pdf file--application-pdf"> <a href="@file_url" style="display: inline-flex;">
+                                                                    <span>@Html.Sitecore().Field("Pdf Logo",all_pdf)</span>
+                                                                    @Html.Sitecore().Field("Heading", all_pdf)
+                                                                    </a>
+                                                                </span>
                                                             </div>
                                                         </div>
                                                     </div>
