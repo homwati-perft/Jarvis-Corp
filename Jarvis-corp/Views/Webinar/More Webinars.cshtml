@@ -2,24 +2,66 @@
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @{
-
+    Sitecore.Data.Items.Item webinar_register = Sitecore.Context.Database.GetItem("{7D443203-5509-4A23-B6DB-5B6AE78B1DD8}");
+    Sitecore.Collections.ChildList webinar_child = webinar_register.GetChildren();
 }
 <section class="cards-section white static expanded lower-eventpanels eventpanels" id="cards-section-webinars">
     <div class="cards-container">
         <div class="card-group">
 
-            <article class="card col-lg-3 col-md-4 col-sm-12">
-                @Html.Sitecore().DynamicPlaceholder("Webinar-Info-left")
-            </article>
-            <article class="card col-lg-3 col-md-4 col-sm-12">
-                @Html.Sitecore().DynamicPlaceholder("Webinar-Info-left-Middle")
-            </article>
-            <article class="card col-lg-3 col-md-4 col-sm-12">
-                @Html.Sitecore().DynamicPlaceholder("Webinar-Info-Right-Middle")
-            </article>
-            <article class="card col-lg-3 col-md-4 col-sm-12">
-                @Html.Sitecore().DynamicPlaceholder("Webinar-Info-Right")
-            </article>
+            
+                @foreach (Sitecore.Data.Items.Item webinar in webinar_child)
+                {
+                    <article class="card col-lg-3 col-md-4 col-sm-12">
+                        @{ 
+                            Sitecore.Data.Fields.LinkField regi_link = webinar.Fields["Link"];
+                            Sitecore.Data.Fields.MultilistField author_list = webinar.Fields["Author List"];
+                        }
+                       
+
+                        <div class="card-content">
+                            <div class="event-table">
+                                <div class="event-row">
+                                    <div class="event-column event-date-heading">
+                                        <h1>@Html.Sitecore().Field("Date", webinar, new { format = "MMMM dd" })</h1>
+                                        <h2>- @Html.Sitecore().Field("Date", webinar, new { format = "MMMM dd, yyyy" })</h2>
+                                    </div>
+                                    <div class="event-column event-details" style="height: 152px;">
+                                        <div class="event">
+                                            <h4 class="event-title">
+                                                <a href="">@Html.Sitecore().Field("Heading", webinar) </a>
+                                            </h4>
+                                            <h5></h5>
+                                            <h6>
+                                                @Html.Sitecore().Field("Date", webinar, new { format = "MMMM dd, yyyy" })
+                                            </h6>
+                                            <a href="@regi_link.Url" class="btn-event">@Html.Sitecore().Field("Link Heading", webinar)</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer" style="height:363px;">
+                                        <div class="event-column event-host">
+                                            @foreach (Sitecore.Data.Items.Item authors in author_list.GetItems())
+                                            {
+                                                <div class="profile-label">
+                                                    <div class="profile-row">
+                                                        <div class="content-container img-wrapper">
+                                                            @Html.Sitecore().Field("Photo", authors, new { @class = "img-profile" })
+                                                        </div>
+                                                        <div class="content-container content-wrapper">
+                                                            <h5>@Html.Sitecore().Field("Name", authors)</h5>
+                                                            <h6>@Html.Sitecore().Field("Designation", authors)</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                }
+                    
 
         </div>
     </div>
