@@ -3,11 +3,11 @@
 @using Sitecore.Links
 @model RenderingModel
 @{
-    //var linkUrl= LinkManager.GetItemUrl(item)
+//var linkUrl= LinkManager.GetItemUrl(item)
 }
 <header role="banner" style="top:75px">
     <div class="search-icon" id="search-trigger-overlay" onclick="openSearch()">
-        
+
     </div>
     <div id="myOverlay" class="overlay">
         <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
@@ -21,7 +21,7 @@
     <div class="container-fluid">
         <div class="row">
 
-           
+
 
             <nav class="navbar navbar-full">
                 <div class="collapse navbar-toggleable-sm" id="mobilenav">
@@ -32,48 +32,48 @@
                                 <li class="nav-item hidden-sm-down">
                                     <!-- Possible change here -->
                                     <a href="/" class="logo">
-                                       @Html.Sitecore().Field("Logo")
+                                        @Html.Sitecore().Field("Logo")
                                     </a>
                                     <!-- /Possible change here -->
                                 </li>
                                 <!-- BEGIN MAIN NAVIGATION -->
 
-                                @{ 
+                                @{
                                     Sitecore.Data.Fields.MultilistField NavigationLinks = Model.Item.Fields["Navigation Links"];
                                 }
 
                                 @foreach (Sitecore.Data.Items.Item nav in NavigationLinks.GetItems())
                                 {
-                                   
-                                        var linkUrl = LinkManager.GetItemUrl(nav);
-                                   
+
+                                    var linkUrl = LinkManager.GetItemUrl(nav);
+
                                     <li class="nav-item ">
                                         <a href="@linkUrl" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            @Html.Sitecore().Field("Heading",nav)
+                                            @Html.Sitecore().Field("Heading", nav)
                                         </a>
 
 
                                         <div class="dropdown-menu mega-menu" aria-labelledby="servicesMenu">
                                             <div class="menu-title">
-                                                <a href="" style="width:100px;max-width:200px;">@Html.Sitecore().Field("Title",nav)</a>
+                                                <a href="" style="width:100px;max-width:200px;">@Html.Sitecore().Field("Title", nav)</a>
                                             </div>
-                                            @{ 
+                                            @{
                                                 Sitecore.Collections.ChildList sub = nav.GetChildren();
                                             }
                                             <div class="menu-block">
                                                 <ul class="list-unstyled">
-                                                   @foreach (Sitecore.Data.Items.Item link in sub)
-                                                   {
-                                                       var sublinkhref = LinkManager.GetItemUrl(link);
-                                                    <li class="mega-menu-item"><a href="@sublinkhref">@Html.Sitecore().Field("Heading",link)</a></li>
-                                                   }
-                                                  </ul>
+                                                    @foreach (Sitecore.Data.Items.Item link in sub)
+                                                    {
+                                                        var sublinkhref = LinkManager.GetItemUrl(link);
+                                                        <li class="mega-menu-item"><a href="@sublinkhref">@Html.Sitecore().Field("Heading", link)</a></li>
+                                                    }
+                                                </ul>
                                             </div>
                                         </div>
                                     </li>
-                                }
-                                
-                                
+                                                }
+
+
 
 
                                 <!-- END MAIN NAVIGATION -->
@@ -89,10 +89,12 @@
                                 @foreach (Sitecore.Data.Items.Item site in SiteLinks.GetItems())
                                 {
                                     var linkUrl = "";
-                                    Sitecore.Data.Fields.LinkField site_l= site.Fields["Link"];
-                                    if(site_l.LinkType == "internal")
+                                    Sitecore.Data.Fields.LinkField site_l = site.Fields["Link"];
+                                    if (site_l.LinkType == "internal")
                                     {
+                          
                                         linkUrl = LinkManager.GetItemUrl(site_l.TargetItem);
+                                    
                                     }
                                     else
                                     {
@@ -103,8 +105,8 @@
                                         <a href="@linkUrl">@Html.Sitecore().Field("Link Heading", site)</a>
                                     </li>
                                 }
-                                
-                                
+
+
                             </ul>
                         </div>
                     </div>

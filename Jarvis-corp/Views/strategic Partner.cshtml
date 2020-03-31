@@ -20,9 +20,9 @@ Sitecore.Collections.ChildList children = Model.Item.GetChildren();
                 foreach (Sitecore.Data.Items.Item strategic_partners in children)
                 {
                     Sitecore.Data.Fields.LinkField partner_link = strategic_partners.Fields["Partner Link"];
-                    //var part = LinkManager.GetItemUrl(partner_link.TargetItem);
+                    var part = LinkManager.GetItemUrl(partner_link.TargetItem);
                     <div class="square-container col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <a href='@partner_link.Url' class='square'>@Html.Sitecore().Field("Strategic Partner Logo", strategic_partners, new { @class= "square-logo" })</a>
+                        <a href='@part' class='square'>@Html.Sitecore().Field("Strategic Partner Logo", strategic_partners, new { @class= "square-logo" })</a>
                     </div>
                 }
 
