@@ -5,17 +5,17 @@
   <File Include="/Jarvis_Corp.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{7A618F93-0600-480C-88DF-DE74E14A94DF}</Item>
   </File>
-  <File Include="Views\Shared\Jarvis_Corp.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
+  <File Include="Views\Shared\Layout\Jarvis_Corp.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
   <File Include="/Views/Shared/Jarvis_Corp.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{E37AB61B-3F08-4AC5-8970-39F611CF0382}</Item>
   </File>
-  <File Include="Views\Services Main Right.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+  <File Include="Views\Jarvis_Corp\Services\Services Main Right.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{E28D5110-95A8-4BC9-81E0-338EBF7E56D8}</Item>
   </File>
-  <File Include="Views\Enterprise_Partner.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+  <File Include="Views\Jarvis_Corp\Enterprise_Partner\Enterprise_Partner.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{2976D9AD-E824-4277-A809-C003EFD9CB38}</Item>
   </File>
-  <File Include="Views\Shared\Investor.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
+  <File Include="Views\Shared\Layout\Investor.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
   <File Include="/Views/Shared/Investor.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{6FA82A1B-8EF3-4352-92C3-59A55333B17F}</Item>
   </File>
