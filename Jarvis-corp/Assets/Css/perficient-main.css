@@ -9860,7 +9860,7 @@ a.img-responsive {
         color: #fff; /*or #333 for contact page*/
 	}
 	p span, h3 span, p span span {
-	    color: #8a8a8a !important;
+	    /*color: #8a8a8a !important;*/
 	}
 	.thanks p {
 		font-size: 12px;
