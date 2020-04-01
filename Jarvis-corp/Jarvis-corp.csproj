@@ -153,6 +153,7 @@
     <Content Include="Views\Jarvis_Corp\Event\Events.cshtml" />
     <Content Include="Views\Jarvis_Corp\Event\EventRow.cshtml" />
     <Content Include="Views\Jarvis_Corp\Event\EventList.cshtml" />
+    <Content Include="Views\Jarvis_Corp\Emerging_Partner\Emerging_Partner.cshtml" />
     <None Include="Views\Jarvis_Corp\Industries\Industries.cshtml" />
     <Content Include="Views\Shared\Main.cshtml" />
     <Content Include="Views\Jarvis_Corp\Services\Services Main Right.cshtml" />
@@ -165,6 +166,7 @@
     <Content Include="Views\Investor\Investor-Right.cshtml" />
     <Content Include="Views\Investor\Investor-Middle.cshtml" />
     <Content Include="Views\Investor\Contact-Info.cshtml" />
+    <Content Include="Views\Jarvis_Corp\SOC_Complaint\Soc_Complaint.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

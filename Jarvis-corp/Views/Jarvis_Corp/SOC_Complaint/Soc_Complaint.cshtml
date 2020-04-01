@@ -1,0 +1,21 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<section class="content-block content-row-flip">
+    <div class="container">
+        <div class="row">
+            <!--Control what side the image appears with the content-->
+            <div class="col-lg-4 content-box">
+                @Html.Sitecore().Field("SOC Complaint Badge", new { @class = "img-responsive" })
+            </div>
+            <div class="col-lg-8 content-box">
+                <h1>@Html.Sitecore().Field("Heading")</h1>
+                <p><strong>@Html.Sitecore().Field("Sub-Heading")</strong></p>
+                <p>@Html.Sitecore().Field("Intro")</p>
+            </div>
+        </div>
+    </div>
+</section> 
