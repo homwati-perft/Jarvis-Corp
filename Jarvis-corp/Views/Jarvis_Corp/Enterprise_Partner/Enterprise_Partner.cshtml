@@ -1,6 +1,7 @@
 ﻿@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
+@using Sitecore.Links
 @{
     Sitecore.Collections.ChildList strategic_partner = Model.Item.GetChildren();
 }
@@ -18,10 +19,11 @@
             @foreach (Sitecore.Data.Items.Item partner in strategic_partner)
             {
                 Sitecore.Data.Fields.LinkField partner_link = partner.Fields["Link"];
+                var part = LinkManager.GetItemUrl(partner_link.TargetItem);
 
                 <div class="box-container col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <div class="box-partner box-ibm">
-                        <a href='@partner_link.Url'>  
+                        <a href='@part'>  
                             @Html.Sitecore().Field("Background", partner, new { @class = "box-background img-responsive" })
                             <div class="box-overlay-container box-overlay-standard">
                                 <div class="box-logo-container">

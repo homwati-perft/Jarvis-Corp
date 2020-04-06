@@ -9,9 +9,9 @@
         <div class="row">
             <div class="col-xs-12 section-header">
                 <h2>@Html.Sitecore().Field("Heading")</h2>
-                <aside>
+                @*<aside>
                     <a href='/insights/events' class='section-header-button'>@Html.Sitecore().Field("Event Button Heading")</a>
-                </aside>
+                </aside>*@
             </div>
         </div>
     </div>
@@ -19,11 +19,11 @@
         <div class="card-group">
             @Html.Sitecore().Placeholder("Event Row")
         </div>
-        <div class="container">
+        @*<div class="container">
             <div class="button-wrapper">
                 <a href='/insights/events' class='cardsbutton-style mobile-button'>VIEW ALL EVENTS</a>
             </div>
-        </div>
+        </div>*@
     </div>
 </section>
 
