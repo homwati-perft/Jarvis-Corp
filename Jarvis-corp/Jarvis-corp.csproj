@@ -48,6 +48,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sitecore.ContentSearch, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.ContentSearch.NoReferences.9.0.180604\lib\NET462\Sitecore.ContentSearch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.ContentSearch.Linq.NoReferences.9.0.180604\lib\NET462\Sitecore.ContentSearch.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Kernel.NoReferences.9.0.180604\lib\NET462\Sitecore.Kernel.dll</HintPath>
       <Private>True</Private>
@@ -101,6 +109,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\PageSearchController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -122,12 +131,25 @@
     <Content Include="Assets\Images\services-marketing-card-image-2.jpg" />
     <Content Include="Assets\Images\ss-kiddle-card.jpg" />
     <Content Include="Assets\JavaScript\Main.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Shared\Layout\Jarvis_Corp.cshtml" />
     <None Include="App_Config\Include\Investor\Investor.site.config">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\Jarvis_Corp.pubxml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -154,6 +176,7 @@
     <Content Include="Views\Jarvis_Corp\Event\EventRow.cshtml" />
     <Content Include="Views\Jarvis_Corp\Event\EventList.cshtml" />
     <Content Include="Views\Jarvis_Corp\Emerging_Partner\Emerging_Partner.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Views\Jarvis_Corp\Industries\Industries.cshtml" />
     <Content Include="Views\Shared\Main.cshtml" />
     <Content Include="Views\Jarvis_Corp\Services\Services Main Right.cshtml" />
@@ -167,6 +190,9 @@
     <Content Include="Views\Investor\Investor-Middle.cshtml" />
     <Content Include="Views\Investor\Contact-Info.cshtml" />
     <Content Include="Views\Jarvis_Corp\SOC_Complaint\Soc_Complaint.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\PageSearch\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -176,7 +202,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\JavaScript\Lib\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

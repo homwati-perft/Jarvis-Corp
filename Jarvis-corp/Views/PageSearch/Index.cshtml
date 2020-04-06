@@ -1,0 +1,11 @@
+﻿@using System.Collections.Generic;
+@using Sitecore.ContentSearch;
+@using Sitecore.ContentSearch.Linq;
+
+@model IEnumerable<SearchHit<Sitecore.ContentSearch.SearchTypes.SearchResultItem>>
+<div class="tabcontent">
+    @foreach (var item in Model)
+    {
+        <h1>@item.Document.Name</h1>
+    }
+</div>
